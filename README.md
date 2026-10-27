@@ -2,7 +2,7 @@
 
 Local pose extraction, pose editing, expression extraction and Kimodo Text to Pose for Genesis figures in DAZ Studio.
 
-**[Download PoseSnap for Windows x64](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1-rc3/PoseSnap-1.0.1-public-rc3-Windows-x64.zip)** · [Release notes and checksums](https://github.com/AithaEzio/PoseSnap/releases/tag/v1.0.1-rc3)
+**[Download PoseSnap for Windows x64](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-1.0.1-Windows-x64.zip)** · [Release notes and checksums](https://github.com/AithaEzio/PoseSnap/releases/tag/v1.0.1)
 
 ## Start here
 
@@ -13,7 +13,7 @@ Local pose extraction, pose editing, expression extraction and Kimodo Text to Po
 
 Ordinary setup needs no GitHub account, system Python, terminal commands, manual joining of archive parts or separate model imports. Engine files download once and run locally afterward. PoseSnap checks each download and installed file against its pinned SHA-256 hash. Pause/retry retains resumable parts.
 
-The old 1.0.0 core cannot install the new multipart packs. Use this 1.0.1 RC3 download if an older copy says a compatible runtime is not hosted.
+The old 1.0.0 core cannot install the new multipart packs. Use this final v1.0.1 download if an older copy says a compatible runtime is not hosted.
 
 ## Choose your setup
 
@@ -48,12 +48,12 @@ The published app and engine assets exclude personal settings, photos, history, 
 
 ## Verification and current limits
 
-This is an **unsigned release candidate**. The release records frontend, worker and native test results, a relocated native installation smoke test, private-runtime dependency imports, published asset hashes and download availability. Large existing model files were reused in the installation test; it is not a claim that every model was downloaded from scratch. Live DAZ checks and other hardware/Windows configurations remain unverified.
+This is the **unsigned v1.0.1 release**. The release records frontend, worker and native test results, a relocated native installation smoke test, private-runtime dependency imports, published asset hashes and download availability. Large existing model files were reused in the installation test; it is not a claim that every model was downloaded from scratch. Live DAZ checks and other hardware/Windows configurations remain unverified.
 
 The Windows ZIP SHA-256 is:
 
 ```text
-62f58000b4aaee402b63faf8c2a84621871a76fa504e392a22f3c290594bca9f
+c3e8cfe4c828d46204ca30fd9bccad9ca5968b3ade9e4511b454a721fb58fdad
 ```
 
 The release also provides its checksum file and complete portable-core manifest.
@@ -62,7 +62,7 @@ The release also provides its checksum file and complete portable-core manifest.
 
 Component licences and artist credits accompany the app in **THIRD_PARTY_NOTICES.md**, **licenses** and **About**. Model and runtime downloads retain their provider terms. **Built with Meta Llama 3.**
 
-[Component licence bundle](https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-Component-Licences-20261026.zip) · [Base engine assets](https://github.com/AithaEzio/PoseSnap/releases/tag/engines-20261026-v1) · [Runtime supplement](https://github.com/AithaEzio/PoseSnap/releases/tag/engines-20261027-v2)
+[Component licence bundle](https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-Component-Licences-20261026.zip) · [PoseSnap Engine Files](https://github.com/AithaEzio/PoseSnap/releases/tag/engines-20261026-v1)
 
 ## Support the creator
 
