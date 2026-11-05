@@ -1,0 +1,76 @@
+PoseSnap Source-Available License 1.0
+Copyright (c) 2026 Aitha (AithaEzio)
+https://github.com/AithaEzio/PoseSnap
+
+1. Scope and acceptance
+These terms cover original PoseSnap software and documentation offered by Aitha
+under this license (the Software), including its source and compiled forms.
+Exercising the permissions below constitutes acceptance of these conditions.
+Third-party material is excluded and remains subject to its own terms. Nothing
+here restricts rights you already have independently of this license.
+
+2. Free use and private modification
+Subject to these conditions, Aitha grants a worldwide, royalty-free, nonexclusive
+copyright license to use, run, copy and modify the Software for personal purposes
+and internal business operations. Private modifications need not be published.
+These permissions continue while you comply with this license.
+
+3. Noncommercial redistribution and source
+You may distribute the Software and modifications without a commercial purpose,
+provided you retain this license, copyright and third-party notices, identify
+modifications, and provide the corresponding source under these same terms.
+Corresponding source includes the preferred editable form and the instructions
+and scripts needed to build your distributed version, excluding separately
+licensed standard tools and dependencies. Supply it alongside the distribution
+or at a public, no-charge location available for as long as you distribute it.
+Do not remove the attribution "PoseSnap by Aitha" and the repository URL from
+the distributed legal notices. Modified applications must also retain a readily
+accessible attribution, such as in About, and must not claim to be official.
+Unconditional optional donations are permitted; payment must not be a condition
+of access, features, updates or the corresponding source.
+
+4. Commercial distribution and hosted access
+Separate written permission from Aitha is required to sell, rent, license for a
+fee, paywall, commercially bundle or otherwise commercially distribute original
+PoseSnap code, compiled copies or derivative software. It is also required to
+offer the Software's functionality as a commercial hosted service or API,
+including paid, advertising-funded or subscription generation services. Adding
+another interface, plugin or product does not remove these conditions when it
+includes covered Software or commercially offers access to its functionality.
+Internal business use and selling creative outputs under section 5 are not such
+distribution or hosted access. Ordinary third-party hosting of a free source
+repository does not itself make a noncommercial distribution commercial.
+
+5. Creative outputs
+PoseSnap imposes no royalty, attribution or source-disclosure requirement on
+your exported pose or expression parameter data, or on renders, animations,
+artwork, pose packs and human-performed commissioned creative work made using
+the Software. You may publish and sell those outputs. Credit is appreciated,
+not required by PoseSnap. Creative outputs do not include copies of application
+code, executable software, model weights or preview meshes. This permission
+does not grant ownership of inputs or outputs, guarantee copyright protection,
+or override rights in reference images, figures, models or other materials.
+
+6. Separate rights and branding
+Upstream software, model, runtime and artwork licenses remain applicable. This
+license cannot relicense material Aitha does not own. No trademark license or
+endorsement is implied; truthful attribution and identification are permitted.
+No patent rights are granted by implication. Other permissions require the
+appropriate rights holder's separate written authorization.
+
+7. Compliance and termination
+Permission ends upon a violation. For a first violation reported to you in
+writing, permission is reinstated if you correct it and take practical steps to
+remedy its effects within 30 days of notice. No reinstatement is promised for
+later violations. Termination does not restrict independently licensed creative
+outputs or rights already validly granted to compliant recipients.
+
+8. No warranty or liability
+To the extent permitted by applicable law, the Software is provided AS IS,
+without warranty of any kind, including merchantability, fitness for a particular
+purpose or noninfringement. The licensor is not liable for claims, damages or
+other liability arising from the Software or its use. Mandatory legal rights
+that cannot be excluded remain unaffected.
+
+This is a custom source-available license, not an OSI-approved open-source license.
+Commercial-permission enquiries: https://github.com/AithaEzio/PoseSnap/issues
