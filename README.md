@@ -20,7 +20,7 @@ PoseSnap helps you build a starting pose, refine its joints and bring it into DA
 
 The complete 100-second launch film. Sound is optional. Waiting intervals were edited; this is a feature demonstration, not a speed benchmark.
 
-https://github.com/user-attachments/assets/d7951055-044c-4008-894c-a01d260be272
+https://github.com/user-attachments/assets/a85fcd09-58cc-46c7-b85b-56ad5f204716
 
 [Download the original 1080p film](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-Launch-1080p.mp4) · [Captions](docs/media/captions.vtt) · [Transcript and media credits](docs/MEDIA-CREDITS.md)
 
@@ -49,13 +49,13 @@ Choose the people and their Genesis generations in **Arrange interaction**. Buil
 
 **Partner contacts and hidden depth remain experimental estimates.** Check palms, feet and spacing from the side, particularly with overlapping or cropped people.
 
-https://github.com/user-attachments/assets/85829472-8b73-4620-b34d-3974ad88ce4e
+https://github.com/user-attachments/assets/5c93acd5-61f9-4615-8ecd-42e3ff7e757a
 
 ## Make the pose your own
 
 In **Pose Studio**, select a body part and adjust its joints. Use grouped joint search, numeric controls, movement/rotation tools, position and rotation pins, zeroing, facing and floor controls. Undo helps you explore and return to an earlier edit. Save local drafts and restore them from History.
 
-https://github.com/user-attachments/assets/ed840471-c073-498b-95ac-ab15abb45f08
+https://github.com/user-attachments/assets/1bc34f21-d9f2-4e65-a42e-33676fa352bb
 
 ## Capture an expression
 
@@ -63,7 +63,7 @@ In **Expression Studio**, select a face and extract its expression locally. Comp
 
 Hidden facial detail, strong occlusion and extreme head angles can need manual correction. The preview is an adapted face, not your Genesis figure's own shape.
 
-https://github.com/user-attachments/assets/e28acc7f-4fd0-477d-9e10-05517c10c186
+https://github.com/user-attachments/assets/170a9364-b1a4-443c-ad66-060a8b93a259
 
 ## Describe a body pose
 
@@ -75,13 +75,13 @@ Explore up to three valid alternatives, choose **More like this**, then Apply an
 
 **This mode generates body poses, not facial expressions or props.** Approximate hand shapes is optional and off by default. Detailed instructions are goals, not exact joint guarantees; use Studio for precision. Fully constrained requests may return fewer choices.
 
-https://github.com/user-attachments/assets/dfd3a136-df8a-4b66-90a1-5bca3a3ea074
+https://github.com/user-attachments/assets/14df7f46-8ad9-4698-be41-00fc438492ba
 
 ## Save it. Return to it.
 
 Local History and Studio drafts keep useful results within reach. Restore a previous result, inspect it and continue editing. Deleting app-managed history does not delete your original imported photograph.
 
-https://github.com/user-attachments/assets/43179b50-8507-4b74-a20e-24929c709192
+https://github.com/user-attachments/assets/7415b7f6-e528-40a2-b11c-8bb40a5912a7
 
 ## What do I need?
 
