@@ -41,7 +41,7 @@ Open your image and choose a numbered person. **Auto** selects **Pure** for indi
 
 Smart Fit's **Zero cropped joints** option starts eligible joints outside the photograph at neutral. It is on by default, applies to the next extraction and leaves genuinely occluded anatomy inside the image estimated. Pure remains a separate method.
 
-https://github.com/user-attachments/assets/00462483-f446-4cf2-b739-bdf2aae1d342
+https://github.com/user-attachments/assets/b180cfb8-381e-4bdc-9fa2-2142c0ff1839
 
 ## Two people. One shared pose.
 
