@@ -11,7 +11,7 @@ Turn photos and words into editable Genesis poses—on your own PC.
 
 **Windows x64 · Local processing · Genesis 8 & 9 · Source available**
 
-<img src="docs/media/hero.jpg" width="100%" alt="PoseSnap Pose Studio showing joint rotation controls and an editable mannequin">
+<img src="docs/media/Hero.jpg" width="100%" alt="PoseSnap Pose Studio showing joint rotation controls and an editable mannequin">
 </div>
 
 PoseSnap helps you build a starting pose, refine its joints and bring it into DAZ Studio. Extract a person from a photograph, arrange two people, capture a facial expression or describe a body pose in words. Inspect the result before applying it.
