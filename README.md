@@ -16,6 +16,9 @@ Turn photos and words into editable Genesis poses—on your own PC.
 
 PoseSnap helps you build a starting pose, refine its joints and bring it into DAZ Studio. Extract a person from a photograph, arrange two people, capture a facial expression or describe a body pose in words. Inspect the result before applying it.
 
+<img width="2212" height="1222" alt="image" src="https://github.com/user-attachments/assets/7dbcf62d-dfbb-40b7-8c75-1d659fdc655a" />
+
+
 ## Watch PoseSnap
 
 The complete 100-second launch film. Sound is optional. Waiting intervals were edited; this is a feature demonstration, not a speed benchmark.
