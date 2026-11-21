@@ -1,0 +1,176 @@
+{
+  "schema": 1,
+  "release": "https://github.com/AithaEzio/PoseSnap/releases/tag/engines-20261026-v1",
+  "components": [
+    {
+      "component": "body",
+      "inventorySha256": "a928442df1fffc7acefede4f73c991d83fa726c683ababb3a74f644b39b9171e",
+      "extraFiles": [
+        {
+          "path": "models/body/licenses/DINOv3-LICENSE.md",
+          "size": 7569,
+          "sha256": "70caeefb829f11a21cd8fe524e8c3e9efeaeb8ec6e9326810878b9104f4255fc"
+        },
+        {
+          "path": "models/body/licenses/MHR-LICENSE.txt",
+          "size": 11560,
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "path": "models/body/licenses/SAM-LICENSE.txt",
+          "size": 8256,
+          "sha256": "315341214aa835fd11de2922fbeae30f741d1c8ba214173974bbf0046ef9afa5"
+        }
+      ],
+      "artifact": {
+        "kind": "zip",
+        "size": 1739124720,
+        "sha256": "9e0078d7012c7a761b299f94b842e618e80e571d12b1ad110364962962a22da1",
+        "urls": [],
+        "target": null,
+        "mappings": [],
+        "parts": [
+          {
+            "size": 1610612736,
+            "sha256": "a8c88939b1b0237510a22c3fc7d154d099d38264e368d5a55d2c7a05001ca935",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-body-Pinned-weights.zip.part-001"
+            ]
+          },
+          {
+            "size": 128511984,
+            "sha256": "89e97d4c1196f436bf9b174bd50304bc250e74e4e109ddd74cbd1b805b0a3dac",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-body-Pinned-weights.zip.part-002"
+            ]
+          }
+        ]
+      },
+      "note": "Original SAM 3D Body and MHR files, redistributed with their SAM, DINOv3 and MHR licences. Model use remains subject to those terms."
+    },
+    {
+      "component": "browser",
+      "inventorySha256": "56640fa4a02b8c4590d51410caeed13ff2657ad3bf14929ebef927c7bdd32e76",
+      "extraFiles": [],
+      "artifact": {
+        "kind": "zip",
+        "size": 317959311,
+        "sha256": "7387dfffe3484a66b59b66922d9b54cb3f300248e133cc39aef10ae9d8dba0fb",
+        "urls": [],
+        "target": null,
+        "mappings": [],
+        "parts": [
+          {
+            "size": 317959311,
+            "sha256": "7387dfffe3484a66b59b66922d9b54cb3f300248e133cc39aef10ae9d8dba0fb",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-browser-154.0.4258.62.zip.part-001"
+            ]
+          }
+        ]
+      },
+      "note": "Verified PoseSnap runtime pack. Every download part is checked and installed automatically."
+    },
+    {
+      "component": "interaction-detector",
+      "inventorySha256": "0d0947671d42b678d2376c2bda7d9ad5480d72c3b456dea82af53f89a7d5c84d",
+      "extraFiles": [],
+      "artifact": {
+        "kind": "zip",
+        "size": 163237140,
+        "sha256": "8490313c753f69ea97a21039432ce81a4d75ac883c8782dda0cbb7045ba4dd4b",
+        "urls": [],
+        "target": null,
+        "mappings": [],
+        "parts": [
+          {
+            "size": 163237140,
+            "sha256": "8490313c753f69ea97a21039432ce81a4d75ac883c8782dda0cbb7045ba4dd4b",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-interaction-detector-RTMO-body7.zip.part-001"
+            ]
+          }
+        ]
+      },
+      "note": "Verified PoseSnap runtime pack. Every download part is checked and installed automatically."
+    },
+    {
+      "component": "kimodo-runtime",
+      "inventorySha256": "8f5235cfda2cfb8eead9c9f95c12c5120c7c893e71a42204a0a4499ef00ae314",
+      "extraFiles": [],
+      "artifact": {
+        "kind": "zip",
+        "size": 4127665,
+        "sha256": "1b583e97efceea7b66740f8f4daa70a232bfca47d38cedbf6056ffc62ca404e8",
+        "urls": [],
+        "target": null,
+        "mappings": [],
+        "parts": [
+          {
+            "size": 4127665,
+            "sha256": "1b583e97efceea7b66740f8f4daa70a232bfca47d38cedbf6056ffc62ca404e8",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-kimodo-runtime-hybrid-v1-2838514d73df.zip.part-001"
+            ]
+          }
+        ]
+      },
+      "note": "Verified PoseSnap runtime pack. Every download part is checked and installed automatically."
+    },
+    {
+      "component": "python",
+      "inventorySha256": "64b764e130b1e7845811bc6a1b34a53901ae2dc2b12fc55752a80cdbd4060ce3",
+      "extraFiles": [
+        {
+          "path": "runtime/python/Lib/site-packages/numpy/_core/tests/_natype.py",
+          "size": 6457,
+          "sha256": "b955c709a866c836d9640690f8e2aa6969ce809448611113534e9daecb1248fd"
+        }
+      ],
+      "artifact": {
+        "kind": "zip",
+        "size": 3798127427,
+        "sha256": "5dfca66e5a62282a2978f7894861e0373c7a8e823e19a3c450551c329ec08fbd",
+        "urls": [],
+        "target": null,
+        "mappings": [],
+        "parts": [
+          {
+            "size": 1610612736,
+            "sha256": "1d0cfb3cc9b6763e6ef2bdbe721a7fbf30279a3e45addc262d8a8b1c3710335d",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-python-3.11.9.zip.part-001"
+            ]
+          },
+          {
+            "size": 1610612736,
+            "sha256": "ca5fe60189518277b77b5bd7225ae9d215fddb17b3a1373eb5f91e4020d894fe",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-python-3.11.9.zip.part-002"
+            ]
+          },
+          {
+            "size": 576901955,
+            "sha256": "d289d7d9e1fad9ca8296a2abe9360c5235e0329d82862bfd5994cbd65d66b97b",
+            "urls": [
+              "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-python-3.11.9.zip.part-003"
+            ]
+          }
+        ]
+      },
+      "note": "Verified private engine, including the NumPy helper required by SciPy during normal extraction. Every part is checked and installed automatically.",
+      "additionalArtifacts": [
+        {
+          "kind": "file",
+          "size": 6457,
+          "sha256": "b955c709a866c836d9640690f8e2aa6969ce809448611113534e9daecb1248fd",
+          "urls": [
+            "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-python-numpy-runtime-helper.py"
+          ],
+          "target": "runtime/python/Lib/site-packages/numpy/_core/tests/_natype.py",
+          "mappings": []
+        }
+      ]
+    }
+  ]
+}

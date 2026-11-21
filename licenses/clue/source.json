@@ -1,0 +1,54 @@
+{
+  "repository": "https://github.com/vita-epfl/CLUE",
+  "revision": "df00480954d0fc5d4c2f4165f08da0c886ec3991",
+  "files": [
+    {
+      "path": "licenses/clue/LICENSE",
+      "source": "ITW/inference/plugin/LICENSE",
+      "bytes": 1664,
+      "sha256": "369799e74aed039a6fe690a75b10dac55462b925f3468cb9173026473df412e0"
+    },
+    {
+      "path": "licenses/clue/README.md",
+      "source": "ITW/inference/plugin/README.md",
+      "bytes": 5102,
+      "sha256": "f36eadff8392e9167fc53ccd077098951b4798cf3391e30728744c10fc092984"
+    },
+    {
+      "path": "worker/sam3dbody_clue/__init__.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/__init__.py",
+      "bytes": 242,
+      "sha256": "821cea979d5d1edf967cbc84dc091e7a50b595abf7c325e55154053106d44fd3"
+    },
+    {
+      "path": "worker/sam3dbody_clue/clue_mhr/__init__.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/clue_mhr/__init__.py",
+      "bytes": 97,
+      "sha256": "9164540816b9c47e34e3a336c0e328824810ee1ae6d47e68fa7eb6680e55f281"
+    },
+    {
+      "path": "worker/sam3dbody_clue/clue_mhr/algorithm.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/clue_mhr/algorithm.py",
+      "bytes": 31210,
+      "sha256": "9795268f1ed2273adbcd42bdd22df4705e159550bee015f64cce5771d7e89894"
+    },
+    {
+      "path": "worker/sam3dbody_clue/clue_mhr/model_loader.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/clue_mhr/model_loader.py",
+      "bytes": 13967,
+      "sha256": "cca3892d28bbeadb7d064f02161d51bb0cfbdcdf999a34b73fd1125c58f35fad"
+    },
+    {
+      "path": "worker/sam3dbody_clue/head.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/head.py",
+      "bytes": 3443,
+      "sha256": "b203dba32f8d2f5957a46a9d5f45fa59613122d03a83526ac362596a00a0fd8a"
+    },
+    {
+      "path": "worker/sam3dbody_clue/plugin.py",
+      "source": "ITW/inference/plugin/sam3dbody_clue/plugin.py",
+      "bytes": 6840,
+      "sha256": "e5a45f355151f2d085782e8ea919abd05b5e6b20668a3a797675ca28c16fbd60"
+    }
+  ]
+}

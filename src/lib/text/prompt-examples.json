@@ -1,0 +1,669 @@
+[
+  {
+    "id": "relaxed",
+    "group": "Mood and stance",
+    "title": "Relaxed standing",
+    "prompt": "A person stands casually with their weight on the right leg and the left foot resting lightly beside it. The shoulders stay low, the arms hang loosely by their sides, and the head is turned left.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "A weight shift and relaxed shoulders suggest ease. Fine-tune subtle bends in Pose Studio.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "head",
+          "turn_left"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright",
+      "design": {
+        "weight": "r"
+      }
+    }
+  },
+  {
+    "id": "confident",
+    "group": "Mood and stance",
+    "title": "Quiet confidence",
+    "prompt": "A person stands confidently with weight on the left leg. The right hand rests on the waist, the left arm is down, and the head is turned right.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "The weight, hand placement and head direction define the stance; the face is unchanged.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_arm",
+          "lower"
+        ],
+        [
+          "head",
+          "turn_right"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright",
+      "design": {
+        "weight": "l",
+        "arms": {
+          "r": "waist"
+        }
+      }
+    }
+  },
+  {
+    "id": "happy",
+    "group": "Mood and stance",
+    "title": "Grounded celebration",
+    "prompt": "A person is standing in a happy celebration. Both arms are raised overhead, the torso stays upright, and both feet are flat on the floor.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "This is a body celebration. Add a facial expression separately in Expression studio.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_arm",
+          "raise"
+        ],
+        [
+          "r_arm",
+          "raise"
+        ],
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "sad",
+    "group": "Mood and stance",
+    "title": "Subdued body language",
+    "prompt": "A person stands sadly with a slumped upper body and low shoulders. Both arms hang at the sides, the weight rests on the right leg, and the head tilts downward.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Slumping and a low head suggest mood. No facial frown or eye movement is generated.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_arm",
+          "lower"
+        ],
+        [
+          "r_arm",
+          "lower"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright",
+      "design": {
+        "weight": "r"
+      }
+    }
+  },
+  {
+    "id": "tired",
+    "group": "Mood and stance",
+    "title": "Weary standing",
+    "prompt": "A person is standing wearily with a heavy, relaxed posture. The torso leans forward, the right hand rests on the waist, and the left arm is down.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Use a modest forward lean for fatigue. Adjust the final lean manually if it is exaggerated.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "torso",
+          "lean_forward"
+        ],
+        [
+          "l_arm",
+          "lower"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright",
+      "design": {
+        "arms": {
+          "r": "waist"
+        }
+      }
+    }
+  },
+  {
+    "id": "guard",
+    "group": "Mood and stance",
+    "title": "Defensive guard",
+    "prompt": "A person holds a defensive guard with the left foot forward and both knees softly bent. The torso leans forward, the forearms protect the upper body, and the head faces forward.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Describe the overall guard first. Soft bends and forearm spacing are descriptive cues, not exact angles.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "torso",
+          "lean_forward"
+        ]
+      ],
+      "support": {},
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "walk",
+    "group": "Actions",
+    "title": "Comfortable walking",
+    "prompt": "A person walks forward at a comfortable pace with a natural alternating stride. The left arm is forward, the right arm is back, and the torso stays upright.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "PoseSnap chooses a static moment from the motion. Stride phase may vary between choices.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_arm",
+          "forward"
+        ],
+        [
+          "r_arm",
+          "back"
+        ],
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {},
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "run",
+    "group": "Actions",
+    "title": "Energetic running",
+    "prompt": "A person runs forward with an energetic stride, bent elbows and a modest forward body lean. The right knee is bent, the left leg reaches back, and the arms swing naturally.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Running supplies the main behavior. The exact airborne or grounded phase depends on the generated motion.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "r_knee",
+          "bend"
+        ]
+      ],
+      "support": {},
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "dance",
+    "group": "Actions",
+    "title": "Asymmetric dancing",
+    "prompt": "A person dances playfully with weight on the right foot. The left leg is raised, the left arm is overhead, the right arm is down, and the head is turned right.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "This fixes the important sides and leaves smaller posture details free. Inspect the lifted leg and supporting foot.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_leg",
+          "raise"
+        ],
+        [
+          "l_arm",
+          "raise"
+        ],
+        [
+          "r_arm",
+          "lower"
+        ],
+        [
+          "head",
+          "turn_right"
+        ]
+      ],
+      "support": {
+        "l": "air"
+      },
+      "interaction": "none",
+      "floor": "upright",
+      "design": {
+        "weight": "r"
+      }
+    }
+  },
+  {
+    "id": "jump",
+    "group": "Actions",
+    "title": "Jump at the airborne moment",
+    "prompt": "A person jumps upward with both feet in the air. Both arms are raised overhead, both knees are bent, and the torso stays upright.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Both feet in the air identifies the desired phase. Do not also ask for planted feet.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_arm",
+          "raise"
+        ],
+        [
+          "r_arm",
+          "raise"
+        ],
+        [
+          "l_knee",
+          "bend"
+        ],
+        [
+          "r_knee",
+          "bend"
+        ],
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {
+        "l": "air",
+        "r": "air"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "wave",
+    "group": "Actions",
+    "title": "Friendly greeting",
+    "prompt": "A person stands and gives a friendly greeting with the right arm raised. The left arm is down, the head is turned right, and the body rests comfortably over both feet.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "This requests the body gesture. For a specific open palm, enable Approximate hand shapes and add “right hand open”.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "r_arm",
+          "raise"
+        ],
+        [
+          "l_arm",
+          "lower"
+        ],
+        [
+          "head",
+          "turn_right"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "seated",
+    "group": "Floor and support",
+    "title": "Seated with grounded feet",
+    "prompt": "A person is seated upright on a chair with both feet flat on the floor. Both hands rest on the thighs and the head is turned left.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental seating. The chair is implied by the pose; PoseSnap does not create furniture. Place and adjust the chair in DAZ.",
+    "experimental": true,
+    "checks": {
+      "changes": [
+        [
+          "head",
+          "turn_left"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "seated",
+      "requirements": {
+        "flatFeet": true,
+        "feet": {
+          "l": "flat",
+          "r": "flat"
+        }
+      }
+    }
+  },
+  {
+    "id": "kneel",
+    "group": "Floor and support",
+    "title": "Right-knee kneeling",
+    "prompt": "A person kneels on the right knee with the left foot flat on the floor. The torso stays upright and both hands rest on the waist.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental floor support. Inspect the right knee, left sole and hand placement from the side.",
+    "experimental": true,
+    "checks": {
+      "changes": [
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {},
+      "interaction": "none",
+      "floor": "kneel",
+      "design": {
+        "arms": {
+          "l": "waist",
+          "r": "waist"
+        }
+      },
+      "requirements": {
+        "kneeSide": "r",
+        "feet": {
+          "l": "flat"
+        }
+      }
+    }
+  },
+  {
+    "id": "supine",
+    "group": "Floor and support",
+    "title": "Lying face up",
+    "prompt": "A person is lying supine on the floor, face up, with the legs extended and both arms resting beside the body.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental lying support. “Supine” and “face up” identify the same orientation; check the back and limbs against the floor.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "none",
+      "floor": "lying",
+      "requirements": {
+        "facing": "supine"
+      }
+    }
+  },
+  {
+    "id": "prone",
+    "group": "Floor and support",
+    "title": "Lying face down",
+    "prompt": "A person is lying prone on the floor, face down, with the torso supported by the floor. Both forearms rest beside the upper body and the legs extend behind.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental lying support. Inspect the torso, head and limbs for floor intersections.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "none",
+      "floor": "lying",
+      "requirements": {
+        "facing": "prone"
+      }
+    }
+  },
+  {
+    "id": "crawl",
+    "group": "Floor and support",
+    "title": "Crawling on all fours",
+    "prompt": "A person is crawling on all fours with both palms and both knees on the floor. The torso is roughly horizontal and the head follows the spine.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental support requires both palms and knees. One-hand or three-point crawling needs manual work in Pose Studio.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "none",
+      "floor": "crawl",
+      "requirements": {
+        "bothKnees": true
+      }
+    }
+  },
+  {
+    "id": "handstand",
+    "group": "Floor and support",
+    "title": "Two-hand handstand",
+    "prompt": "A person holds a two-hand handstand with both palms on the floor. The torso is inverted, both legs extend upward together, and the arms support the body.",
+    "actors": 1,
+    "handShapes": false,
+    "notes": "Experimental inverted support. This does not support a one-hand balance; fitting may reject a proposal that cannot meet both palm contacts.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "none",
+      "floor": "inverted"
+    }
+  },
+  {
+    "id": "peace",
+    "group": "Hands and fingers",
+    "title": "Right-hand peace sign",
+    "prompt": "A person is standing casually. The right hand forms a peace sign near the shoulder, the left arm is down, and the head is turned right.",
+    "actors": 1,
+    "handShapes": true,
+    "notes": "Turn Approximate hand shapes on. Inspect the V shape and curled fingers; hand height remains a body-generation cue.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "r_hand",
+          "peace"
+        ],
+        [
+          "l_arm",
+          "lower"
+        ],
+        [
+          "head",
+          "turn_right"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "pinch",
+    "group": "Hands and fingers",
+    "title": "Left-hand pinch",
+    "prompt": "A person is standing. The left hand forms a pinch at chest height, the right arm is down, and the torso stays upright.",
+    "actors": 1,
+    "handShapes": true,
+    "notes": "Turn Approximate hand shapes on. Thumb and fingertip contact is approximate and can be rejected by rig limits.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "l_hand",
+          "pinch"
+        ],
+        [
+          "r_arm",
+          "lower"
+        ],
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "index",
+    "group": "Hands and fingers",
+    "title": "Independent index finger",
+    "prompt": "A person is standing with the right arm raised and the left arm down. The right hand is a fist with the right index finger extended, and the torso stays upright.",
+    "actors": 1,
+    "handShapes": true,
+    "notes": "Turn Approximate hand shapes on. The explicit index instruction overrides that finger within the requested fist.",
+    "experimental": false,
+    "checks": {
+      "changes": [
+        [
+          "r_arm",
+          "raise"
+        ],
+        [
+          "l_arm",
+          "lower"
+        ],
+        [
+          "r_hand",
+          "fist"
+        ],
+        [
+          "r_index",
+          "extend"
+        ],
+        [
+          "torso",
+          "upright"
+        ]
+      ],
+      "support": {
+        "l": "flat",
+        "r": "flat"
+      },
+      "interaction": "none",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "handhold",
+    "group": "Partner contacts",
+    "title": "Supported handholding",
+    "prompt": "Both people are holding hands beside their hips, facing the same direction. Person 1 uses the left hand. Person 2 uses the right hand.",
+    "actors": 2,
+    "handShapes": false,
+    "notes": "Experimental contact. Choose Two characters. This supported layout uses Person 1’s left hand and Person 2’s right hand, beside the hips and facing the same way.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "handhold",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "front-hug",
+    "group": "Partner contacts",
+    "title": "Front hug",
+    "prompt": "Person 1 leans forward for a front hug. Person 2 leans forward for a front hug with Person 1.",
+    "actors": 2,
+    "handShapes": false,
+    "notes": "Experimental contact. Choose Two characters. Request the broad hug here; arrange specific hugging arms or fingers in Pose Studio.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "front_hug",
+      "floor": "upright"
+    }
+  },
+  {
+    "id": "side-hug",
+    "group": "Partner contacts",
+    "title": "Person 2 right-arm side hug",
+    "prompt": "Person 2 rests the right arm around Person 1 in a side hug. Person 1 stands upright.",
+    "actors": 2,
+    "handShapes": false,
+    "notes": "Experimental contact. Choose Two characters. Person 2 owns the right arm; inspect the palm and partner spacing in Pose Studio.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "side_hug",
+      "floor": "upright",
+      "owners": [
+        [
+          2,
+          "r"
+        ]
+      ],
+      "actorSupport": {
+        "1": {
+          "l": "flat",
+          "r": "flat"
+        }
+      }
+    }
+  },
+  {
+    "id": "shoulder",
+    "group": "Partner contacts",
+    "title": "Hand on a partner’s shoulder",
+    "prompt": "Person 1 stands relaxed. Person 2 places the right hand on Person 1 left shoulder.",
+    "actors": 2,
+    "handShapes": false,
+    "notes": "Experimental contact. Choose Two characters. Person 2’s right hand targets Person 1’s left shoulder; the target is not Person 2’s own shoulder.",
+    "experimental": true,
+    "checks": {
+      "changes": [],
+      "support": {},
+      "interaction": "shoulder",
+      "floor": "upright",
+      "owners": [
+        [
+          2,
+          "r"
+        ]
+      ],
+      "actorSupport": {
+        "1": {
+          "l": "flat",
+          "r": "flat"
+        }
+      }
+    }
+  }
+]

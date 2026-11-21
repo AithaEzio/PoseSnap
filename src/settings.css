@@ -1,0 +1,29 @@
+.drawer-navigation{flex:none}
+.app-shell{position:relative}
+.app-shell>.drawer{grid-row:2;top:14px}
+.app-shell>.drawer:not(.collapsed){bottom:12px}
+.drawer-navigation[hidden]{display:none}
+.settings-tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.settings-tabs button{grid-column:span 2}
+.settings-tabs button{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;min-height:40px;padding:8px 6px;border:1px solid transparent;border-radius:8px;background:transparent;color:var(--muted);font-size:11px;white-space:nowrap}
+.settings-tabs button:hover{background:var(--surface);color:var(--text)}
+.settings-tabs button.active{background:var(--tint);border-color:var(--accent);color:var(--accent)}
+.settings-tabs button svg{flex:none}
+.settings-page{min-width:0}
+.settings-page:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.settings-page .settings-section{margin:0;padding:0;border:0}
+.settings-page .settings-section+.settings-section{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.settings-page .settings-section>h3:first-child{margin-top:0;margin-bottom:18px}
+.fit-guide{padding:14px;margin:20px 0;border:1px solid var(--line);background:var(--deep);border-radius:12px}
+.fit-guide>strong{font-size:12px;color:var(--text);font-weight:550}
+.settings-page .fit-guide p{margin:9px 0 0;font-size:11px;line-height:1.7;color:var(--muted)}
+.fit-guide p b{color:var(--text);font-weight:550}
+.settings-tips{padding-left:17px;margin:10px 0 20px;color:var(--muted);font-size:12px;line-height:1.7}
+.settings-tips li{margin:9px 0;padding-left:3px}
+.settings-page .settings-credit{padding-top:9px;color:var(--text)}
+.quality-popover .fit-reading{font-size:11px;color:var(--text)}
+.quality-popover .fit-coverage{padding:8px 10px;border-radius:7px;background:var(--deep)}
+@media(max-width:1049px){.settings-tabs{padding:10px 12px}}
+
+.extraction-method-badge{font-size:10px;color:var(--muted);border:1px solid var(--line);background:var(--deep);border-radius:8px;padding:7px 9px;white-space:nowrap}
+.extraction-method-badge:hover{color:var(--accent);border-color:var(--accent)}

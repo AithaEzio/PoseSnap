@@ -1,0 +1,2867 @@
+{
+  "version": 1,
+  "binary": "face.bin",
+  "sha256": "0f423ec4f1de19e529aa469c31aa0a00f0527cf882a2c7e264ad48df29a2a2f6",
+  "binaryBytes": 6009752,
+  "coordinateConvention": "right-handed, Y-up, +Z front, metres",
+  "bounds": {
+    "min": [
+      -0.14469947755336762,
+      -0.38894961977005,
+      -0.15960888504981993
+    ],
+    "max": [
+      0.14478529393672943,
+      0.1550579831600189,
+      0.12189269721508025
+    ]
+  },
+  "framing": {
+    "center": [
+      0,
+      0.005,
+      0.02
+    ],
+    "height": 0.32,
+    "width": 0.25
+  },
+  "source": {
+    "file": "Face Model.blend",
+    "sha256": "856f8516d6fe75cf24c06de05c6c652c5a95667cb764abdbb387746aaa50cac0",
+    "title": "Face Sculpting 108th (female)",
+    "artist": "ComputerCat",
+    "artistHandle": "ComputerCats",
+    "url": "https://sketchfab.com/3d-models/face-sculpting-108th-female-b6638e38d0b24ec7be39b578df25727b"
+  },
+  "license": {
+    "name": "Creative Commons Attribution 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "modifications": "Reduced preview geometry, local mouth retopology and facial shape-key rig by PoseSnap; original source file unchanged."
+  },
+  "meshes": [
+    {
+      "name": "Skin",
+      "positions": {
+        "offset": 3022928,
+        "count": 114528,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 3481040,
+        "count": 114528,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 3939152,
+        "count": 228474,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 228474,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Pearl skin",
+          "color": [
+            0.6899999976158142,
+            0.6899999976158142,
+            0.7300000190734863
+          ],
+          "roughness": 0.550000011920929,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "browDownLeft": {
+          "indices": {
+            "offset": 0,
+            "count": 524,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2096,
+            "count": 1572,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browDownRight": {
+          "indices": {
+            "offset": 8384,
+            "count": 523,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 10476,
+            "count": 1569,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browInnerUp": {
+          "indices": {
+            "offset": 16752,
+            "count": 322,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 18040,
+            "count": 966,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browOuterUpLeft": {
+          "indices": {
+            "offset": 21904,
+            "count": 486,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 23848,
+            "count": 1458,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browOuterUpRight": {
+          "indices": {
+            "offset": 29680,
+            "count": 490,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 31640,
+            "count": 1470,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "cheekPuff": {
+          "indices": {
+            "offset": 37520,
+            "count": 5962,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 61368,
+            "count": 17886,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "cheekSquintLeft": {
+          "indices": {
+            "offset": 132912,
+            "count": 1699,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 139708,
+            "count": 5097,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "cheekSquintRight": {
+          "indices": {
+            "offset": 160096,
+            "count": 1753,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 167108,
+            "count": 5259,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeBlinkLeft": {
+          "indices": {
+            "offset": 188144,
+            "count": 1001,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 192148,
+            "count": 3003,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeBlinkRight": {
+          "indices": {
+            "offset": 204160,
+            "count": 1020,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 208240,
+            "count": 3060,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeSquintLeft": {
+          "indices": {
+            "offset": 220480,
+            "count": 1001,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 224484,
+            "count": 3003,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeSquintRight": {
+          "indices": {
+            "offset": 236496,
+            "count": 1020,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 240576,
+            "count": 3060,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeWideLeft": {
+          "indices": {
+            "offset": 252816,
+            "count": 1001,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 256820,
+            "count": 3003,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeWideRight": {
+          "indices": {
+            "offset": 268832,
+            "count": 1021,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 272916,
+            "count": 3063,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawForward": {
+          "indices": {
+            "offset": 285168,
+            "count": 5152,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 305776,
+            "count": 15456,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 367600,
+            "count": 5152,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 388208,
+            "count": 15456,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 450032,
+            "count": 5164,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 470688,
+            "count": 15492,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 532656,
+            "count": 5152,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 553264,
+            "count": 15456,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthClose": {
+          "indices": {
+            "offset": 615088,
+            "count": 4326,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 632392,
+            "count": 12978,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthDimpleLeft": {
+          "indices": {
+            "offset": 684304,
+            "count": 4691,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 703068,
+            "count": 14073,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthDimpleRight": {
+          "indices": {
+            "offset": 759360,
+            "count": 4739,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 778316,
+            "count": 14217,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFrownLeft": {
+          "indices": {
+            "offset": 835184,
+            "count": 4696,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 853968,
+            "count": 14088,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFrownRight": {
+          "indices": {
+            "offset": 910320,
+            "count": 4740,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 929280,
+            "count": 14220,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFunnel": {
+          "indices": {
+            "offset": 986160,
+            "count": 9093,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1022532,
+            "count": 27279,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLeft": {
+          "indices": {
+            "offset": 1131648,
+            "count": 9095,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1168028,
+            "count": 27285,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLowerDownLeft": {
+          "indices": {
+            "offset": 1277168,
+            "count": 2402,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1286776,
+            "count": 7206,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLowerDownRight": {
+          "indices": {
+            "offset": 1315600,
+            "count": 2417,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1325268,
+            "count": 7251,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPressLeft": {
+          "indices": {
+            "offset": 1354272,
+            "count": 4761,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1373316,
+            "count": 14283,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPressRight": {
+          "indices": {
+            "offset": 1430448,
+            "count": 4782,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1449576,
+            "count": 14346,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPucker": {
+          "indices": {
+            "offset": 1506960,
+            "count": 9099,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1543356,
+            "count": 27297,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRight": {
+          "indices": {
+            "offset": 1652544,
+            "count": 9095,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1688924,
+            "count": 27285,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRollLower": {
+          "indices": {
+            "offset": 1798064,
+            "count": 4344,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1815440,
+            "count": 13032,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRollUpper": {
+          "indices": {
+            "offset": 1867568,
+            "count": 5722,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1890456,
+            "count": 17166,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthShrugLower": {
+          "indices": {
+            "offset": 1959120,
+            "count": 4339,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 1976476,
+            "count": 13017,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthShrugUpper": {
+          "indices": {
+            "offset": 2028544,
+            "count": 5715,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2051404,
+            "count": 17145,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthSmileLeft": {
+          "indices": {
+            "offset": 2119984,
+            "count": 5864,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2143440,
+            "count": 17592,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthSmileRight": {
+          "indices": {
+            "offset": 2213808,
+            "count": 5899,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2237404,
+            "count": 17697,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthStretchLeft": {
+          "indices": {
+            "offset": 2308192,
+            "count": 4697,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2326980,
+            "count": 14091,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthStretchRight": {
+          "indices": {
+            "offset": 2383344,
+            "count": 4740,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2402304,
+            "count": 14220,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthUpperUpLeft": {
+          "indices": {
+            "offset": 2459184,
+            "count": 3004,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2471200,
+            "count": 9012,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthUpperUpRight": {
+          "indices": {
+            "offset": 2507248,
+            "count": 3016,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2519312,
+            "count": 9048,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "noseSneerLeft": {
+          "indices": {
+            "offset": 2555504,
+            "count": 2211,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2564348,
+            "count": 6633,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "noseSneerRight": {
+          "indices": {
+            "offset": 2590880,
+            "count": 2208,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2599712,
+            "count": 6624,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {
+        "JawSmileLeft": {
+          "indices": {
+            "offset": 2626208,
+            "count": 2451,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2636012,
+            "count": 7353,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthSmileLeft"
+          ],
+          "max": 1
+        },
+        "JawSmileRight": {
+          "indices": {
+            "offset": 2665424,
+            "count": 2471,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2675308,
+            "count": 7413,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthSmileRight"
+          ],
+          "max": 1
+        },
+        "JawPucker": {
+          "indices": {
+            "offset": 2704960,
+            "count": 4199,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2721756,
+            "count": 12597,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthPucker"
+          ],
+          "max": 1
+        },
+        "JawFunnel": {
+          "indices": {
+            "offset": 2772144,
+            "count": 4150,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2788744,
+            "count": 12450,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthFunnel"
+          ],
+          "max": 1
+        },
+        "JawLowerDownLeft": {
+          "indices": {
+            "offset": 2838544,
+            "count": 2059,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2846780,
+            "count": 6177,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthLowerDownLeft"
+          ],
+          "max": 1
+        },
+        "JawLowerDownRight": {
+          "indices": {
+            "offset": 2871488,
+            "count": 2093,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2879860,
+            "count": 6279,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthLowerDownRight"
+          ],
+          "max": 1
+        },
+        "JawRollLower": {
+          "indices": {
+            "offset": 2904976,
+            "count": 3688,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2919728,
+            "count": 11064,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthRollLower"
+          ],
+          "max": 1
+        },
+        "JawShrugLower": {
+          "indices": {
+            "offset": 2963984,
+            "count": 3684,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 2978720,
+            "count": 11052,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthShrugLower"
+          ],
+          "max": 1
+        }
+      },
+      "vertices": 38176,
+      "triangles": 76158
+    },
+    {
+      "name": "Brows",
+      "positions": {
+        "offset": 4860536,
+        "count": 468,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 4862408,
+        "count": 468,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 4864280,
+        "count": 912,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 912,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Charcoal brows",
+          "color": [
+            0.06499999761581421,
+            0.05900000035762787,
+            0.07500000298023224
+          ],
+          "roughness": 0.550000011920929,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "browDownLeft": {
+          "indices": {
+            "offset": 4853048,
+            "count": 78,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4853360,
+            "count": 234,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browDownRight": {
+          "indices": {
+            "offset": 4854296,
+            "count": 78,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4854608,
+            "count": 234,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browInnerUp": {
+          "indices": {
+            "offset": 4855544,
+            "count": 156,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4856168,
+            "count": 468,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browOuterUpLeft": {
+          "indices": {
+            "offset": 4858040,
+            "count": 78,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4858352,
+            "count": 234,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "browOuterUpRight": {
+          "indices": {
+            "offset": 4859288,
+            "count": 78,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4859600,
+            "count": 234,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {},
+      "vertices": 156,
+      "triangles": 304
+    },
+    {
+      "name": "Lashes",
+      "positions": {
+        "offset": 4884632,
+        "count": 1044,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 4888808,
+        "count": 1044,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 4892984,
+        "count": 1968,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 1968,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Charcoal brows.001",
+          "color": [
+            0.06499999761581421,
+            0.05900000035762787,
+            0.07500000298023224
+          ],
+          "roughness": 0.550000011920929,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "eyeBlinkLeft": {
+          "indices": {
+            "offset": 4867928,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4868624,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeBlinkRight": {
+          "indices": {
+            "offset": 4870712,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4871408,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeSquintLeft": {
+          "indices": {
+            "offset": 4873496,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4874192,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeSquintRight": {
+          "indices": {
+            "offset": 4876280,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4876976,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeWideLeft": {
+          "indices": {
+            "offset": 4879064,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4879760,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "eyeWideRight": {
+          "indices": {
+            "offset": 4881848,
+            "count": 174,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 4882544,
+            "count": 522,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {},
+      "vertices": 348,
+      "triangles": 656
+    },
+    {
+      "name": "EyeLeft",
+      "positions": {
+        "offset": 4900856,
+        "count": 3366,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 4914320,
+        "count": 3366,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 4927784,
+        "count": 6336,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 4416,
+          "materialIndex": 0
+        },
+        {
+          "start": 4416,
+          "count": 384,
+          "materialIndex": 1
+        },
+        {
+          "start": 4800,
+          "count": 384,
+          "materialIndex": 2
+        },
+        {
+          "start": 5184,
+          "count": 768,
+          "materialIndex": 3
+        },
+        {
+          "start": 5952,
+          "count": 384,
+          "materialIndex": 4
+        }
+      ],
+      "materials": [
+        {
+          "name": "Sclera",
+          "color": [
+            0.7200000286102295,
+            0.7300000190734863,
+            0.7400000095367432
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Pupil",
+          "color": [
+            0.006000000052154064,
+            0.008999999612569809,
+            0.013000000268220901
+          ],
+          "roughness": 0.23999999463558197,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Iris inner",
+          "color": [
+            0.054999999701976776,
+            0.09799999743700027,
+            0.13500000536441803
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Iris blue grey",
+          "color": [
+            0.10499999672174454,
+            0.18000000715255737,
+            0.23999999463558197
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Limbal ring",
+          "color": [
+            0.029999999329447746,
+            0.052000001072883606,
+            0.07100000232458115
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {},
+      "correctives": {},
+      "vertices": 1122,
+      "triangles": 2112
+    },
+    {
+      "name": "EyeRight",
+      "positions": {
+        "offset": 4953128,
+        "count": 3366,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 4966592,
+        "count": 3366,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 4980056,
+        "count": 6336,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 4416,
+          "materialIndex": 0
+        },
+        {
+          "start": 4416,
+          "count": 384,
+          "materialIndex": 1
+        },
+        {
+          "start": 4800,
+          "count": 384,
+          "materialIndex": 2
+        },
+        {
+          "start": 5184,
+          "count": 768,
+          "materialIndex": 3
+        },
+        {
+          "start": 5952,
+          "count": 384,
+          "materialIndex": 4
+        }
+      ],
+      "materials": [
+        {
+          "name": "Sclera.001",
+          "color": [
+            0.7200000286102295,
+            0.7300000190734863,
+            0.7400000095367432
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Pupil.001",
+          "color": [
+            0.006000000052154064,
+            0.008999999612569809,
+            0.013000000268220901
+          ],
+          "roughness": 0.23999999463558197,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Iris inner.001",
+          "color": [
+            0.054999999701976776,
+            0.09799999743700027,
+            0.13500000536441803
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Iris blue grey.001",
+          "color": [
+            0.10499999672174454,
+            0.18000000715255737,
+            0.23999999463558197
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Limbal ring.001",
+          "color": [
+            0.029999999329447746,
+            0.052000001072883606,
+            0.07100000232458115
+          ],
+          "roughness": 0.3199999928474426,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {},
+      "correctives": {},
+      "vertices": 1122,
+      "triangles": 2112
+    },
+    {
+      "name": "MouthCavity",
+      "positions": {
+        "offset": 5017944,
+        "count": 864,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5021400,
+        "count": 864,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5024856,
+        "count": 1578,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 1578,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Mouth interior",
+          "color": [
+            0.06499999761581421,
+            0.020999999716877937,
+            0.027000000700354576
+          ],
+          "roughness": 0.6800000071525574,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "jawForward": {
+          "indices": {
+            "offset": 5005400,
+            "count": 196,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5006184,
+            "count": 588,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 5008536,
+            "count": 196,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5009320,
+            "count": 588,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 5011672,
+            "count": 196,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5012456,
+            "count": 588,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 5014808,
+            "count": 196,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5015592,
+            "count": 588,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {},
+      "vertices": 288,
+      "triangles": 526
+    },
+    {
+      "name": "UpperTeeth",
+      "positions": {
+        "offset": 5031168,
+        "count": 6048,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5055360,
+        "count": 6048,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5079552,
+        "count": 11928,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 11928,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Enamel",
+          "color": [
+            0.7699999809265137,
+            0.75,
+            0.699999988079071
+          ],
+          "roughness": 0.27000001072883606,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {},
+      "correctives": {},
+      "vertices": 2016,
+      "triangles": 3976
+    },
+    {
+      "name": "LowerTeeth",
+      "positions": {
+        "offset": 5256288,
+        "count": 6048,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5280480,
+        "count": 6048,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5304672,
+        "count": 11928,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 11928,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Enamel.001",
+          "color": [
+            0.7699999809265137,
+            0.75,
+            0.699999988079071
+          ],
+          "roughness": 0.27000001072883606,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "jawForward": {
+          "indices": {
+            "offset": 5127264,
+            "count": 2016,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5135328,
+            "count": 6048,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 5159520,
+            "count": 2016,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5167584,
+            "count": 6048,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 5191776,
+            "count": 2016,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5199840,
+            "count": 6048,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 5224032,
+            "count": 2016,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5232096,
+            "count": 6048,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {},
+      "vertices": 2016,
+      "triangles": 3976
+    },
+    {
+      "name": "UpperGums",
+      "positions": {
+        "offset": 5352384,
+        "count": 4656,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5371008,
+        "count": 4656,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5389632,
+        "count": 9300,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 9300,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gingiva",
+          "color": [
+            0.25,
+            0.10499999672174454,
+            0.125
+          ],
+          "roughness": 0.36000001430511475,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {},
+      "correctives": {},
+      "vertices": 1552,
+      "triangles": 3100
+    },
+    {
+      "name": "LowerGums",
+      "positions": {
+        "offset": 5526160,
+        "count": 4656,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5544784,
+        "count": 4656,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5563408,
+        "count": 9300,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 9300,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Gingiva.001",
+          "color": [
+            0.25,
+            0.10499999672174454,
+            0.125
+          ],
+          "roughness": 0.36000001430511475,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "jawForward": {
+          "indices": {
+            "offset": 5426832,
+            "count": 1552,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5433040,
+            "count": 4656,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 5451664,
+            "count": 1552,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5457872,
+            "count": 4656,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 5476496,
+            "count": 1552,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5482704,
+            "count": 4656,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 5501328,
+            "count": 1552,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5507536,
+            "count": 4656,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {},
+      "vertices": 1552,
+      "triangles": 3100
+    },
+    {
+      "name": "Tongue",
+      "positions": {
+        "offset": 5722208,
+        "count": 3960,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5738048,
+        "count": 3960,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5753888,
+        "count": 7680,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 7680,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Tongue",
+          "color": [
+            0.38999998569488525,
+            0.1599999964237213,
+            0.1899999976158142
+          ],
+          "roughness": 0.28999999165534973,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "jawForward": {
+          "indices": {
+            "offset": 5600608,
+            "count": 1320,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5605888,
+            "count": 3960,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 5621728,
+            "count": 1320,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5627008,
+            "count": 3960,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 5642848,
+            "count": 1320,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5648128,
+            "count": 3960,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 5663968,
+            "count": 1320,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5669248,
+            "count": 3960,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "tongueOut": {
+          "indices": {
+            "offset": 5685088,
+            "count": 1160,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5689728,
+            "count": 3480,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {
+        "JawTongueOut": {
+          "indices": {
+            "offset": 5703648,
+            "count": 1160,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5708288,
+            "count": 3480,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "tongueOut"
+          ],
+          "max": 1
+        }
+      },
+      "vertices": 1320,
+      "triangles": 2560
+    },
+    {
+      "name": "InnerLips",
+      "positions": {
+        "offset": 5957744,
+        "count": 1746,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5964728,
+        "count": 1746,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5971712,
+        "count": 2304,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 1152,
+          "materialIndex": 0
+        },
+        {
+          "start": 1152,
+          "count": 1152,
+          "materialIndex": 1
+        }
+      ],
+      "materials": [
+        {
+          "name": "Outer lip lining",
+          "color": [
+            0.6100000143051147,
+            0.5899999737739563,
+            0.6299999952316284
+          ],
+          "roughness": 0.6000000238418579,
+          "metalness": 0,
+          "side": "double"
+        },
+        {
+          "name": "Inner lip",
+          "color": [
+            0.25,
+            0.10000000149011612,
+            0.11999999731779099
+          ],
+          "roughness": 0.6200000047683716,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {
+        "cheekPuff": {
+          "indices": {
+            "offset": 5784608,
+            "count": 459,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5786444,
+            "count": 1377,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawForward": {
+          "indices": {
+            "offset": 5791952,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5793104,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawLeft": {
+          "indices": {
+            "offset": 5796560,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5797712,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawOpen": {
+          "indices": {
+            "offset": 5801168,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5802320,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "jawRight": {
+          "indices": {
+            "offset": 5805776,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5806928,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthClose": {
+          "indices": {
+            "offset": 5810384,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5811536,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthDimpleLeft": {
+          "indices": {
+            "offset": 5814992,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5816216,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthDimpleRight": {
+          "indices": {
+            "offset": 5819888,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5821112,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFrownLeft": {
+          "indices": {
+            "offset": 5824784,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5826008,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFrownRight": {
+          "indices": {
+            "offset": 5829680,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5830904,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthFunnel": {
+          "indices": {
+            "offset": 5834576,
+            "count": 582,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5836904,
+            "count": 1746,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLeft": {
+          "indices": {
+            "offset": 5843888,
+            "count": 582,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5846216,
+            "count": 1746,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLowerDownLeft": {
+          "indices": {
+            "offset": 5853200,
+            "count": 153,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5853812,
+            "count": 459,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthLowerDownRight": {
+          "indices": {
+            "offset": 5855648,
+            "count": 150,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5856248,
+            "count": 450,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPressLeft": {
+          "indices": {
+            "offset": 5858048,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5859272,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPressRight": {
+          "indices": {
+            "offset": 5862944,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5864168,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthPucker": {
+          "indices": {
+            "offset": 5867840,
+            "count": 582,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5870168,
+            "count": 1746,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRight": {
+          "indices": {
+            "offset": 5877152,
+            "count": 582,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5879480,
+            "count": 1746,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRollLower": {
+          "indices": {
+            "offset": 5886464,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5887616,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthRollUpper": {
+          "indices": {
+            "offset": 5891072,
+            "count": 294,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5892248,
+            "count": 882,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthShrugLower": {
+          "indices": {
+            "offset": 5895776,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5896928,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthShrugUpper": {
+          "indices": {
+            "offset": 5900384,
+            "count": 294,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5901560,
+            "count": 882,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthSmileLeft": {
+          "indices": {
+            "offset": 5905088,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5906312,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthSmileRight": {
+          "indices": {
+            "offset": 5909984,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5911208,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthStretchLeft": {
+          "indices": {
+            "offset": 5914880,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5916104,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthStretchRight": {
+          "indices": {
+            "offset": 5919776,
+            "count": 306,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5921000,
+            "count": 918,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthUpperUpLeft": {
+          "indices": {
+            "offset": 5924672,
+            "count": 153,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5925284,
+            "count": 459,
+            "type": "Float32Array"
+          },
+          "max": 1
+        },
+        "mouthUpperUpRight": {
+          "indices": {
+            "offset": 5927120,
+            "count": 156,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5927744,
+            "count": 468,
+            "type": "Float32Array"
+          },
+          "max": 1
+        }
+      },
+      "correctives": {
+        "JawSmileLeft": {
+          "indices": {
+            "offset": 5929616,
+            "count": 153,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5930228,
+            "count": 459,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthSmileLeft"
+          ],
+          "max": 1
+        },
+        "JawSmileRight": {
+          "indices": {
+            "offset": 5932064,
+            "count": 150,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5932664,
+            "count": 450,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthSmileRight"
+          ],
+          "max": 1
+        },
+        "JawPucker": {
+          "indices": {
+            "offset": 5934464,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5935616,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthPucker"
+          ],
+          "max": 1
+        },
+        "JawFunnel": {
+          "indices": {
+            "offset": 5939072,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5940224,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthFunnel"
+          ],
+          "max": 1
+        },
+        "JawLowerDownLeft": {
+          "indices": {
+            "offset": 5943680,
+            "count": 153,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5944292,
+            "count": 459,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthLowerDownLeft"
+          ],
+          "max": 1
+        },
+        "JawLowerDownRight": {
+          "indices": {
+            "offset": 5946128,
+            "count": 150,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5946728,
+            "count": 450,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthLowerDownRight"
+          ],
+          "max": 1
+        },
+        "JawRollLower": {
+          "indices": {
+            "offset": 5948528,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5949680,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthRollLower"
+          ],
+          "max": 1
+        },
+        "JawShrugLower": {
+          "indices": {
+            "offset": 5953136,
+            "count": 288,
+            "type": "Uint32Array"
+          },
+          "deltas": {
+            "offset": 5954288,
+            "count": 864,
+            "type": "Float32Array"
+          },
+          "drivers": [
+            "jawOpen",
+            "mouthShrugLower"
+          ],
+          "max": 1
+        }
+      },
+      "vertices": 582,
+      "triangles": 768
+    },
+    {
+      "name": "Palate",
+      "positions": {
+        "offset": 5980928,
+        "count": 1875,
+        "type": "Float32Array"
+      },
+      "normals": {
+        "offset": 5988428,
+        "count": 1875,
+        "type": "Float32Array"
+      },
+      "index": {
+        "offset": 5995928,
+        "count": 3456,
+        "type": "Uint32Array"
+      },
+      "groups": [
+        {
+          "start": 0,
+          "count": 3456,
+          "materialIndex": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Palate mucosa",
+          "color": [
+            0.1599999964237213,
+            0.0560000017285347,
+            0.06499999761581421
+          ],
+          "roughness": 0.44999998807907104,
+          "metalness": 0,
+          "side": "double"
+        }
+      ],
+      "morphs": {},
+      "correctives": {},
+      "vertices": 625,
+      "triangles": 1152
+    }
+  ],
+  "eyes": [
+    {
+      "mesh": "EyeLeft",
+      "center": [
+        0.0404985,
+        0.011524800000000002,
+        0.06377384999999999
+      ],
+      "side": "Left",
+      "yawLimitDegrees": 16,
+      "pitchLimitDegrees": 12
+    },
+    {
+      "mesh": "EyeRight",
+      "center": [
+        -0.0404985,
+        0.011524800000000002,
+        0.06377384999999999
+      ],
+      "side": "Right",
+      "yawLimitDegrees": 16,
+      "pitchLimitDegrees": 12
+    }
+  ],
+  "oralAttachments": [
+    {
+      "mesh": "InnerLips",
+      "surface": "Skin",
+      "vertices": [
+        0,
+        1,
+        6,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36,
+        39,
+        42,
+        45,
+        48,
+        51,
+        54,
+        57,
+        60,
+        63,
+        66,
+        69,
+        72,
+        75,
+        78,
+        81,
+        84,
+        87,
+        90,
+        93,
+        96,
+        99,
+        102,
+        105,
+        108,
+        111,
+        114,
+        117,
+        120,
+        123,
+        126,
+        129,
+        132,
+        135,
+        138,
+        141,
+        144,
+        147,
+        150,
+        153,
+        156,
+        159,
+        162,
+        165,
+        168,
+        171,
+        174,
+        177,
+        180,
+        183,
+        186,
+        189,
+        192,
+        195,
+        198,
+        201,
+        204,
+        207,
+        210,
+        213,
+        216,
+        219,
+        222,
+        225,
+        228,
+        231,
+        234,
+        237,
+        240,
+        243,
+        246,
+        249,
+        252,
+        255,
+        258,
+        261,
+        264,
+        267,
+        270,
+        273,
+        276,
+        279,
+        282,
+        285,
+        288,
+        289,
+        294,
+        297,
+        300,
+        303,
+        306,
+        309,
+        312,
+        315,
+        318,
+        321,
+        324,
+        327,
+        330,
+        333,
+        336,
+        339,
+        342,
+        345,
+        348,
+        351,
+        354,
+        357,
+        360,
+        363,
+        366,
+        369,
+        372,
+        375,
+        378,
+        381,
+        384,
+        387,
+        390,
+        393,
+        396,
+        399,
+        402,
+        405,
+        408,
+        411,
+        414,
+        417,
+        420,
+        423,
+        426,
+        429,
+        432,
+        435,
+        438,
+        441,
+        444,
+        447,
+        450,
+        453,
+        456,
+        459,
+        462,
+        465,
+        468,
+        471,
+        474,
+        477,
+        480,
+        483,
+        486,
+        489,
+        492,
+        495,
+        498,
+        501,
+        504,
+        507,
+        510,
+        513,
+        516,
+        519,
+        522,
+        525,
+        528,
+        531,
+        534,
+        537,
+        540,
+        543,
+        546,
+        549,
+        552,
+        555,
+        558,
+        561,
+        564,
+        567,
+        570,
+        573,
+        576,
+        579
+      ],
+      "indices": [
+        33137,
+        33131,
+        33130,
+        33129,
+        33128,
+        33127,
+        33116,
+        33115,
+        33114,
+        33094,
+        33093,
+        33092,
+        33091,
+        33090,
+        33089,
+        33088,
+        33087,
+        33086,
+        33085,
+        33084,
+        33083,
+        33082,
+        33081,
+        33080,
+        33079,
+        33078,
+        33077,
+        33076,
+        33075,
+        33074,
+        33073,
+        33072,
+        33071,
+        33070,
+        33069,
+        33068,
+        33064,
+        33063,
+        33062,
+        33061,
+        33060,
+        33059,
+        33058,
+        33057,
+        33056,
+        33055,
+        33054,
+        33053,
+        33052,
+        33051,
+        33050,
+        33049,
+        33048,
+        33047,
+        33046,
+        33045,
+        33044,
+        33043,
+        33042,
+        33041,
+        33040,
+        33039,
+        33038,
+        33037,
+        33036,
+        33035,
+        33034,
+        33033,
+        33032,
+        33031,
+        33030,
+        33029,
+        33010,
+        33009,
+        33008,
+        33005,
+        33004,
+        33003,
+        33002,
+        33001,
+        33000,
+        32999,
+        32998,
+        32997,
+        32996,
+        32995,
+        32994,
+        32993,
+        32992,
+        32991,
+        32990,
+        32989,
+        32988,
+        32987,
+        32986,
+        32985,
+        32985,
+        32984,
+        32983,
+        32982,
+        32981,
+        32980,
+        32979,
+        32978,
+        32977,
+        32976,
+        32975,
+        32974,
+        32973,
+        32972,
+        32971,
+        32970,
+        32969,
+        32968,
+        32967,
+        32966,
+        32965,
+        32924,
+        32923,
+        32922,
+        32921,
+        32920,
+        32919,
+        32918,
+        32917,
+        32916,
+        32915,
+        32914,
+        32913,
+        32912,
+        32911,
+        32910,
+        32909,
+        32908,
+        32907,
+        32906,
+        32905,
+        32904,
+        32903,
+        32902,
+        32901,
+        32900,
+        32899,
+        32898,
+        32897,
+        32896,
+        32895,
+        32894,
+        32893,
+        32892,
+        32891,
+        32890,
+        32874,
+        32873,
+        32872,
+        32871,
+        32870,
+        32869,
+        32868,
+        32867,
+        32866,
+        32865,
+        32864,
+        32863,
+        32862,
+        32861,
+        32860,
+        32859,
+        32858,
+        32857,
+        32856,
+        32855,
+        32854,
+        32845,
+        32844,
+        32843,
+        32842,
+        32841,
+        32840,
+        32839,
+        32838,
+        32837,
+        32836,
+        32835,
+        32834,
+        32833,
+        32832,
+        32831,
+        32830,
+        32829,
+        32828,
+        32827,
+        32826,
+        33137
+      ]
+    }
+  ],
+  "actions": [
+    "browDownLeft",
+    "browDownRight",
+    "browInnerUp",
+    "browOuterUpLeft",
+    "browOuterUpRight",
+    "cheekPuff",
+    "cheekSquintLeft",
+    "cheekSquintRight",
+    "eyeBlinkLeft",
+    "eyeBlinkRight",
+    "eyeLookDownLeft",
+    "eyeLookDownRight",
+    "eyeLookInLeft",
+    "eyeLookInRight",
+    "eyeLookOutLeft",
+    "eyeLookOutRight",
+    "eyeLookUpLeft",
+    "eyeLookUpRight",
+    "eyeSquintLeft",
+    "eyeSquintRight",
+    "eyeWideLeft",
+    "eyeWideRight",
+    "jawForward",
+    "jawLeft",
+    "jawOpen",
+    "jawRight",
+    "mouthClose",
+    "mouthDimpleLeft",
+    "mouthDimpleRight",
+    "mouthFrownLeft",
+    "mouthFrownRight",
+    "mouthFunnel",
+    "mouthLeft",
+    "mouthLowerDownLeft",
+    "mouthLowerDownRight",
+    "mouthPressLeft",
+    "mouthPressRight",
+    "mouthPucker",
+    "mouthRight",
+    "mouthRollLower",
+    "mouthRollUpper",
+    "mouthShrugLower",
+    "mouthShrugUpper",
+    "mouthSmileLeft",
+    "mouthSmileRight",
+    "mouthStretchLeft",
+    "mouthStretchRight",
+    "mouthUpperUpLeft",
+    "mouthUpperUpRight",
+    "noseSneerLeft",
+    "noseSneerRight"
+  ],
+  "previewExtras": [
+    "tongueOut"
+  ],
+  "actionLimits": {
+    "browDownLeft": 1,
+    "browDownRight": 1,
+    "browInnerUp": 1,
+    "browOuterUpLeft": 1,
+    "browOuterUpRight": 1,
+    "cheekPuff": 1,
+    "cheekSquintLeft": 1,
+    "cheekSquintRight": 1,
+    "eyeBlinkLeft": 1,
+    "eyeBlinkRight": 1,
+    "eyeLookDownLeft": 1,
+    "eyeLookDownRight": 1,
+    "eyeLookInLeft": 1,
+    "eyeLookInRight": 1,
+    "eyeLookOutLeft": 1,
+    "eyeLookOutRight": 1,
+    "eyeLookUpLeft": 1,
+    "eyeLookUpRight": 1,
+    "eyeSquintLeft": 1,
+    "eyeSquintRight": 1,
+    "eyeWideLeft": 1,
+    "eyeWideRight": 1,
+    "jawForward": 1,
+    "jawLeft": 1,
+    "jawOpen": 1,
+    "jawRight": 1,
+    "mouthClose": 1,
+    "mouthDimpleLeft": 1,
+    "mouthDimpleRight": 1,
+    "mouthFrownLeft": 1,
+    "mouthFrownRight": 1,
+    "mouthFunnel": 1,
+    "mouthLeft": 1,
+    "mouthLowerDownLeft": 1,
+    "mouthLowerDownRight": 1,
+    "mouthPressLeft": 1,
+    "mouthPressRight": 1,
+    "mouthPucker": 1,
+    "mouthRight": 1,
+    "mouthRollLower": 1,
+    "mouthRollUpper": 1,
+    "mouthShrugLower": 1,
+    "mouthShrugUpper": 1,
+    "mouthSmileLeft": 1,
+    "mouthSmileRight": 1,
+    "mouthStretchLeft": 1,
+    "mouthStretchRight": 1,
+    "mouthUpperUpLeft": 1,
+    "mouthUpperUpRight": 1,
+    "noseSneerLeft": 1,
+    "noseSneerRight": 1,
+    "tongueOut": 1
+  },
+  "morphMaximum": 1,
+  "coupling": {
+    "jawOpen": "clamp(jawOpen,0,1) * (1 - 0.8*clamp(mouthClose,0,1))",
+    "eyeBlink": "max(eyeBlink,0.45*eyeSquint) * (1 - 0.25*eyeWide)",
+    "opposingActions": "Use net jawLeft-jawRight, mouthLeft-mouthRight and smile-frown on each side.",
+    "tongueOut": "clamp(tongueOut,0,1) * smoothstep(0.10,0.32,effectiveJawOpen)",
+    "lipFamily": "On each side, cap sum(upperUp,press,smile,frown,stretch) to 1.65 by proportional scaling."
+  },
+  "limitations": [
+    "Artist-derived preview shapes are not Genesis vertex geometry or calibrated Genesis deformation.",
+    "Per-action preview strength is bounded to 1 and jaw opening hinge to 12.6 degrees; DAZ export strength remains separately bounded by actual figure channels.",
+    "Original dental arches, oral cavity and bounded tongue added; no wrinkle displacement or identity conversion.",
+    "Tongue extension is an optional additional control, not a core Face Landmarker output.",
+    "Localized mouth patch uses ordered lip loops and small neutral surface smoothing; sparse morphs are anatomical approximations."
+  ]
+}

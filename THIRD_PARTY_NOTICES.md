@@ -447,3 +447,7 @@ Citation: Shukla et al., *Modeling Uncertainty Propagation in 3D Morphable Model
 2026, https://arxiv.org/abs/2610.24646 . Diagnostics describe the initial SAM
 body prior only; global placement, refined hands and expressions are excluded.
 
+
+## Optional v1.1.1 image guidance
+
+ShadeNet-5-35M by singam96 uses Apache 2.0. Its pinned upstream ONNX files support optional CPU inspection of relative depth, normals and albedo. See licenses/guidance for the licence and model revision.

@@ -1,0 +1,24 @@
+node_modules/
+dist/
+.tools/
+.downloads/
+runtime/
+models/
+data/
+temp/
+logs/
+backups/
+release/
+src-tauri/target/
+vendor/
+__pycache__/
+unsloth_compiled_cache/
+*.pyc
+*.log
+.env*
+PoseSnap.exe
+
+# Restore this compatibility input locally using the checked source helper.
+worker/default-rigs.json
+/tests/fixtures/
+/src-tauri/gen/

@@ -1,0 +1,1322 @@
+{
+  "version": 1,
+  "components": [
+    {
+      "id": "kimodo-encoder",
+      "label": "Kimodo \u00b7 CPU Q8 text encoder",
+      "version": "3e8d958803be",
+      "required": false,
+      "roots": [
+        "models/kimodo/encoder"
+      ],
+      "files": [
+        {
+          "path": "models/kimodo/encoder/Llama-3-Kimodo-Q8_0.gguf",
+          "size": 8142058752,
+          "sha256": "b26d0e74b115b33a7f2df5aca04426548365e99217cd590986f8abc4172e4c5c"
+        },
+        {
+          "path": "models/kimodo/encoder/tokenizer.gguf",
+          "size": 7295054,
+          "sha256": "81614aca62a98846c02b72cc2e5378e5bdce8b4d507b88f96eb1faa90dae607e"
+        },
+        {
+          "path": "models/kimodo/encoder/LICENSE-META-LLAMA-3.txt",
+          "size": 7801,
+          "sha256": "475211637354ce4c14b9c3dacccbefbaba735fe1b0db97d6c4fd11cd1356819f"
+        },
+        {
+          "path": "models/kimodo/encoder/NOTICE",
+          "size": 148,
+          "sha256": "97b5a240c05ff37063fcd1701ab047b2ef51dca2447b215d10735af3bfc97eff"
+        },
+        {
+          "path": "models/kimodo/encoder/README.md",
+          "size": 1924,
+          "sha256": "243dc6ba624aaf9ed14c3ce7160db1f86878a629f550f013010332fd6410ae54"
+        }
+      ],
+      "artifacts": [
+        {
+          "urls": [
+            "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML/resolve/3e8d958803beaddb6011ac534f2be972e2710c7d/Llama-3-Kimodo-Q8_0.gguf"
+          ],
+          "size": 8142058752,
+          "sha256": "b26d0e74b115b33a7f2df5aca04426548365e99217cd590986f8abc4172e4c5c",
+          "kind": "file",
+          "target": "models/kimodo/encoder/Llama-3-Kimodo-Q8_0.gguf",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML/resolve/3e8d958803beaddb6011ac534f2be972e2710c7d/tokenizer.gguf"
+          ],
+          "size": 7295054,
+          "sha256": "81614aca62a98846c02b72cc2e5378e5bdce8b4d507b88f96eb1faa90dae607e",
+          "kind": "file",
+          "target": "models/kimodo/encoder/tokenizer.gguf",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML/resolve/3e8d958803beaddb6011ac534f2be972e2710c7d/LICENSE-META-LLAMA-3.txt"
+          ],
+          "size": 7801,
+          "sha256": "475211637354ce4c14b9c3dacccbefbaba735fe1b0db97d6c4fd11cd1356819f",
+          "kind": "file",
+          "target": "models/kimodo/encoder/LICENSE-META-LLAMA-3.txt",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML/resolve/3e8d958803beaddb6011ac534f2be972e2710c7d/NOTICE"
+          ],
+          "size": 148,
+          "sha256": "97b5a240c05ff37063fcd1701ab047b2ef51dca2447b215d10735af3bfc97eff",
+          "kind": "file",
+          "target": "models/kimodo/encoder/NOTICE",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML/resolve/3e8d958803beaddb6011ac534f2be972e2710c7d/README.md"
+          ],
+          "size": 1924,
+          "sha256": "243dc6ba624aaf9ed14c3ce7160db1f86878a629f550f013010332fd6410ae54",
+          "kind": "file",
+          "target": "models/kimodo/encoder/README.md",
+          "mappings": []
+        }
+      ],
+      "source": "https://huggingface.co/LocalAI-io/Llama-3-Kimodo-GGML",
+      "note": "Optional experimental body generator. CPU Q8 encoder + CUDA motion core; no face or image generation."
+    },
+    {
+      "id": "kimodo-motion",
+      "label": "Kimodo \u00b7 Natural body poses",
+      "version": "0e3c89024d89",
+      "required": false,
+      "roots": [
+        "models/kimodo/Kimodo-SOMA-RP-v1.2"
+      ],
+      "files": [
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/model.safetensors",
+          "size": 1133177724,
+          "sha256": "fdcef624140a12c0a4840192ce0b75cafb4e73228a893da3864b4a990d3e919e"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/config.yaml",
+          "size": 675,
+          "sha256": "82f1e9f44d0df517d8ebde03d2e9396fd0bf372360714757901c1d97a2626599"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/LICENSE",
+          "size": 10229,
+          "sha256": "11ccdcb47db87ac30b63765b5e5154403026c4fbb52c19919d99d912ec454e19"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/README.md",
+          "size": 13003,
+          "sha256": "59bea6e02b9c6d25472f75312ee45831594856fe02108ae4a59f9a681ba13405"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/body/mean.npy",
+          "size": 3040,
+          "sha256": "d42f35f8bb7ef52fdec66ae29c5cf590bd038f4f1aabd2d560d1d0f78663ed6f"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/body/std.npy",
+          "size": 3040,
+          "sha256": "965bbad497726ef4e6c46b519827e2cbcb29f974214b25718d20a725b82279ed"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/global_root/mean.npy",
+          "size": 168,
+          "sha256": "6c110980f9a0386e57a8c186f8eac7f55dc05bade92f44c4b391450ada598da1"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/global_root/std.npy",
+          "size": 168,
+          "sha256": "fb15aeed7143f5f0754611f0acf5fa5f55d1f6492a49c23e490fc62f7bf11fb0"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/local_root/mean.npy",
+          "size": 160,
+          "sha256": "4c36e8e33d6d51e6c8206ac796a52b7b3a4da7f0dc49ebdbb4f130178e3e9d31"
+        },
+        {
+          "path": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/local_root/std.npy",
+          "size": 160,
+          "sha256": "5f57b41f51ced7832cffa81702f6e04d8694e16475c184baec6c8be0e98c8dba"
+        }
+      ],
+      "artifacts": [
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/model.safetensors"
+          ],
+          "size": 1133177724,
+          "sha256": "fdcef624140a12c0a4840192ce0b75cafb4e73228a893da3864b4a990d3e919e",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/model.safetensors",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/config.yaml"
+          ],
+          "size": 675,
+          "sha256": "82f1e9f44d0df517d8ebde03d2e9396fd0bf372360714757901c1d97a2626599",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/config.yaml",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/LICENSE"
+          ],
+          "size": 10229,
+          "sha256": "11ccdcb47db87ac30b63765b5e5154403026c4fbb52c19919d99d912ec454e19",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/LICENSE",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/README.md"
+          ],
+          "size": 13003,
+          "sha256": "59bea6e02b9c6d25472f75312ee45831594856fe02108ae4a59f9a681ba13405",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/README.md",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/body/mean.npy"
+          ],
+          "size": 3040,
+          "sha256": "d42f35f8bb7ef52fdec66ae29c5cf590bd038f4f1aabd2d560d1d0f78663ed6f",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/body/mean.npy",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/body/std.npy"
+          ],
+          "size": 3040,
+          "sha256": "965bbad497726ef4e6c46b519827e2cbcb29f974214b25718d20a725b82279ed",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/body/std.npy",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/global_root/mean.npy"
+          ],
+          "size": 168,
+          "sha256": "6c110980f9a0386e57a8c186f8eac7f55dc05bade92f44c4b391450ada598da1",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/global_root/mean.npy",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/global_root/std.npy"
+          ],
+          "size": 168,
+          "sha256": "fb15aeed7143f5f0754611f0acf5fa5f55d1f6492a49c23e490fc62f7bf11fb0",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/global_root/std.npy",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/local_root/mean.npy"
+          ],
+          "size": 160,
+          "sha256": "4c36e8e33d6d51e6c8206ac796a52b7b3a4da7f0dc49ebdbb4f130178e3e9d31",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/local_root/mean.npy",
+          "mappings": []
+        },
+        {
+          "urls": [
+            "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2/resolve/0e3c89024d896064b6851201373f7834784a386b/stats/motion/local_root/std.npy"
+          ],
+          "size": 160,
+          "sha256": "5f57b41f51ced7832cffa81702f6e04d8694e16475c184baec6c8be0e98c8dba",
+          "kind": "file",
+          "target": "models/kimodo/Kimodo-SOMA-RP-v1.2/stats/motion/local_root/std.npy",
+          "mappings": []
+        }
+      ],
+      "source": "https://huggingface.co/nvidia/Kimodo-SOMA-RP-v1.2",
+      "note": "Optional experimental body generator. CPU Q8 encoder + CUDA motion core; no face or image generation."
+    },
+    {
+      "id": "kimodo-runtime",
+      "label": "Kimodo \u00b7 Private runtime",
+      "version": "hybrid-v1-2838514d73df",
+      "required": false,
+      "roots": [
+        "runtime/kimodo"
+      ],
+      "files": [
+        {
+          "path": "runtime/kimodo/encoder/msvcp140.dll",
+          "size": 557728,
+          "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+        },
+        {
+          "path": "runtime/kimodo/encoder/posesnap-kimodo-encoder.exe",
+          "size": 1246720,
+          "sha256": "a0b469ee61c07c3b2e268c9000599acecf2a94e58d78deadcbe62e684d3a2826"
+        },
+        {
+          "path": "runtime/kimodo/encoder/vcruntime140.dll",
+          "size": 124544,
+          "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+        },
+        {
+          "path": "runtime/kimodo/encoder/vcruntime140_1.dll",
+          "size": 49792,
+          "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+        },
+        {
+          "path": "runtime/kimodo/core/ATTRIBUTIONS.MD",
+          "size": 2754,
+          "sha256": "afaccd58a871e5abdc74aea47f43e28e22541afa4400210a2596b7b600f10670"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/__init__.py",
+          "size": 357,
+          "sha256": "0f2918216f4c2039502ad431e87790a4c9c689fc5131070d7a33a66e30dca0f2"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/smplx22/beta.npy",
+          "size": 1328,
+          "sha256": "abfc1cc9e819d017580739e4a65b39458ae840808f01819ad54260283575fa11"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/smplx22/mean_hands.npy",
+          "size": 848,
+          "sha256": "eff97ce9d98bfb1495501d8f00a883c08bfdfc05079037e9832f5d64b58d0e39"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel30/joints.p",
+          "size": 1879,
+          "sha256": "f8582822d4f7cdd7c9cbb5ee8003f07d3116155fc49be11ed125d373d13e4e8a"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel30/soma_base_fit_mhr_params.npz",
+          "size": 1877,
+          "sha256": "61f0b96c8386a19d44823faf4399816642b7e20691ed5b398c7402921090096e"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel77/bvh_joints.p",
+          "size": 3390,
+          "sha256": "acea0ea0902e5a0215f0e2bc6ba75d05f2e73a62dc820017d233dce2202ed109"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel77/joints.p",
+          "size": 2967,
+          "sha256": "dc5fd8e39e0ff312f5d0f536a87ac22ac58445e13443fcb8ab54e6817cb97ce7"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel77/relaxed_hands_rest_pose.npy",
+          "size": 2900,
+          "sha256": "64a3828e0d1ef1f1de8228c74eba8040c0810d898169f1892d8997a213b2b64c"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel77/skin_standard.npz",
+          "size": 531434,
+          "sha256": "90ee2cdf50f168382a7dd7e9c88b118298aba0aca4b72022080c89c4bab0ceb2"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets/skeletons/somaskel77/standard_t_pose_global_offsets_rots.p",
+          "size": 4653,
+          "sha256": "464a8a95159d5e26ad24a702107aec86698935deeb034e02c9fe51e55472d75b"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/assets.py",
+          "size": 603,
+          "sha256": "df261ed2d6021c389ea6578c2f377ac7984806b7fa5f5fcf43be9df1d22bee39"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/constraints.py",
+          "size": 25450,
+          "sha256": "f438dd7114b04e000472eb319dc3ebb1c5b32a21515c43f7da6fc6325345100d"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/geometry.py",
+          "size": 6965,
+          "sha256": "9218c72ad39a478f23bdf6b010e4e3b1165f16dbd480168d0e358dee539f3169"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/meta.py",
+          "size": 2882,
+          "sha256": "33df532d8482fbb1c1e145d3191ac6d1b4112eda80e9989b9e80c9d20ad91606"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/__init__.py",
+          "size": 988,
+          "sha256": "640c516cddf7a5064ceeecf7cf0b4ecdf37d9eaebd9245a8b1d3f15f96dadeb0"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/backbone.py",
+          "size": 10933,
+          "sha256": "8c3cb09b52706bab140873c5453ed5a0a182688c1659a3ba0596db07ea2867a5"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/cfg.py",
+          "size": 6025,
+          "sha256": "e8713de29f4c1534ce1e7be4ecc3c60b2d44ae739dbd80448d19a72584236ae7"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/common.py",
+          "size": 1765,
+          "sha256": "fa132d2e69e693318181ad9627b53c6874c7f42cb4741e80c1935b288155e0e8"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/diffusion.py",
+          "size": 5541,
+          "sha256": "52acbdc3f5f2b95511aa01bda5c8b579490b203f743735c3db3394def635b273"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/kimodo_model.py",
+          "size": 25554,
+          "sha256": "28e57e2ac0d9fa176b81ba2cb400ddaf414178a21833cba19e80b02c35b4f4aa"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/load_model.py",
+          "size": 8486,
+          "sha256": "008092cd0b7adef1faea9fa9075718a61bea8ca9feaf9acf1b1d6caacaa0380a"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/loading.py",
+          "size": 2463,
+          "sha256": "6430b660bcc7c5bc0f41e4b14c4225065f4f3e68e82b9a147b87f4386c88befb"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/registry.py",
+          "size": 18578,
+          "sha256": "21234a5ffc670622dae5feaaa32353ae7beb1f048492a08ca6984aa36865bf51"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/text_encoder_api.py",
+          "size": 2199,
+          "sha256": "bf8230ee3a5c7d6b69123b0c71b0d7ff1a5624858d137ff66dd61bfb2d42e96b"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/tmr.py",
+          "size": 12508,
+          "sha256": "f1a014c1d985c705c8e9cbf3efb8ad04985c7f358564f0f057354445ab0ae0a3"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/model/twostage_denoiser.py",
+          "size": 5643,
+          "sha256": "50b5131755accc478b0f1cebe77743de0cb1a634116ff602bcd5f5bd13fcd302"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/__init__.py",
+          "size": 391,
+          "sha256": "c500998a1275304f961c1e72c6326b3a39490b5d5be8ff76b3e226ea1d151015"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/conditioning.py",
+          "size": 4973,
+          "sha256": "3eaaefffa926f9f1925353ff1e9b206f5a735989d9f6f092969e972cb9c27b06"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/feature_utils.py",
+          "size": 9233,
+          "sha256": "5abbed7aa0cad06cc125ff542c8e22bf16bf7cb4f3543720ccf90763302946b8"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/feet.py",
+          "size": 2051,
+          "sha256": "4dc7cf4813a76e6efb6ccdf5d045eafda407296a4d873b3a10e8fc3f304b3e24"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/reps/__init__.py",
+          "size": 502,
+          "sha256": "fb601cef11b0fc3d0ecce22f48b6a1557c07b30a44e3f2a72c63cfc41cc4cb34"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/reps/ardy_motionrep.py",
+          "size": 14296,
+          "sha256": "d7dcd9bb068d6b82a3c7fd6b13744a7e5322738c1ce99a2321b2f0134336b49a"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/reps/base.py",
+          "size": 26208,
+          "sha256": "e1e21b5b6d2814eb0ff700270b4d46a472e3740ea61e8f5d973f8c9e4420457e"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/reps/kimodo_motionrep.py",
+          "size": 14055,
+          "sha256": "c6ef8783d349fa0e371c203170d3a2f4e63d2e8964648627b570f88d6673765a"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/reps/tmr_motionrep.py",
+          "size": 9237,
+          "sha256": "d3e6aff0a849b252d7fbe0cab5269a4200b89cf48dbca2e3de9db5c21181bfd1"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/smooth_root.py",
+          "size": 7916,
+          "sha256": "7c9ce7ebabe9e70b8e24ae534563068359337872365ae138fb2c337aa6ba9876"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/motion_rep/stats.py",
+          "size": 5745,
+          "sha256": "87e8cf74021779d1a2f6db5c340d6a39207f095b973b1564601ee54dcfbfb796"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/postprocess.py",
+          "size": 15093,
+          "sha256": "a6f6b81df44a76d0064efd79ea195b4360dd6aad3995790bdc68c8ceddd6a07a"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/sanitize.py",
+          "size": 2733,
+          "sha256": "655c6ffa861b7aaa7143b09d9641823158f0fe90636d844dae1549283af50c09"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/__init__.py",
+          "size": 735,
+          "sha256": "9494c2b86434054015bf65c906207db192cdbb5836a795adc2265ff38d387662"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/base.py",
+          "size": 10983,
+          "sha256": "22a4772dc8c38601d9b7e1ccfadcc0a9bb4680d1169c7d75049e80973b51309e"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/bvh.py",
+          "size": 22352,
+          "sha256": "cef588c374dc61ad6f469b7108b0426ac5847983b6b5e1bede98e71ffdced81d"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/definitions.py",
+          "size": 13712,
+          "sha256": "fafe12b5f82ca24096241932d9773b1d3d8c080da1197e74c77cfce8ce3a19fc"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/kinematics.py",
+          "size": 10728,
+          "sha256": "887ad65341669f6c6ee24031529f2cb86c35020892aba255fa3f4bfd2265101e"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/registry.py",
+          "size": 1391,
+          "sha256": "e9c95a69cec9c5dd19257b5c110e517e0f54f510942229d3ae52ac91102bab11"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/skeleton/transforms.py",
+          "size": 4348,
+          "sha256": "af0662a962d4674ed4723bdcb56592210c698076af6f8069a54a39d1e3ea2bff"
+        },
+        {
+          "path": "runtime/kimodo/core/kimodo/tools.py",
+          "size": 14176,
+          "sha256": "00eaa2315d95e0633ef8bd6564d883d1e4e3af0576454700918a88c874f6ae3c"
+        },
+        {
+          "path": "runtime/kimodo/core/LICENSE",
+          "size": 11387,
+          "sha256": "d1a7d615ab8eff4de143b1456f46dabf232f54daf0fcf9a70442bb6f637a9e95"
+        },
+        {
+          "path": "runtime/kimodo/core/motion_correction/__init__.py",
+          "size": 34,
+          "sha256": "6e409c409f6ad463d357c4ea1078df3a25e3f9d82b7ec4042082a7695659ca7f"
+        },
+        {
+          "path": "runtime/kimodo/core/motion_correction/_motion_correction.pyd",
+          "size": 370176,
+          "sha256": "41e4103ad54a4a8704a5547471bb075098551a85454c76bc8e9cb0def916741f"
+        },
+        {
+          "path": "runtime/kimodo/core/motion_correction/motion_postprocess.py",
+          "size": 4014,
+          "sha256": "aab5f01a827b2541bc4d75719c00b61ce325b5b7bcdee328aa677625c590adf0"
+        },
+        {
+          "path": "runtime/kimodo/core/source-manifest.json",
+          "size": 11289,
+          "sha256": "7fad40c08422b86791eefa552e467dabc145771c869f012c4175f79c3935797c"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types/__init__.py",
+          "size": 13819,
+          "sha256": "4729cbb112941062342a2997c9d943d5f6447c4cd6c03a345289f7cce2a11b54"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types/py.typed",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types/test_cases.py",
+          "size": 6421,
+          "sha256": "cc7157e84a5c31b189f05cc16036cee7a6cfc31fc360855229b64cfb8077fe58"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/INSTALLER",
+          "size": 4,
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/licenses/LICENSE",
+          "size": 1083,
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/METADATA",
+          "size": 15046,
+          "sha256": "ee5b6ac64b09274c026051813484025939564067801f485115d9cadc207cf791"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/RECORD",
+          "size": 898,
+          "sha256": "e247b25692f5a87cf4ed0abfe7c4843740ac88bc34ec4921dcdb68542f6dd410"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/REQUESTED",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/annotated_types-0.7.0.dist-info/WHEEL",
+          "size": 87,
+          "sha256": "cc431c46bf4aaf4df1d68cc6c20e6ff4d4012a7de49dda7a2d2a1295583e8e15"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/__init__.py",
+          "size": 15395,
+          "sha256": "0f7ffed1a44fa00179107e13e093d53982cd11cf8379a09c0ede94cc88cffc3d"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_config.py",
+          "size": 14253,
+          "sha256": "595d3b869f317f4434c8ff48c0cbee18b426bb7e00665e6c06cd8968e80293d2"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_core_metadata.py",
+          "size": 5162,
+          "sha256": "63f836b778bbba5b8afb05c266fcc97d114c3d4336dda0582df69ee05cc13f2d"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_core_utils.py",
+          "size": 6746,
+          "sha256": "ffe66e5e1a62ff4243a59cf3f23bc6afcda4812dcf12b8ad591db67e35a9c38f"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_dataclasses.py",
+          "size": 8990,
+          "sha256": "180f8d3b572061b71ed14c193feb1f3dee40ba31e386f81329b3c2ca0f4618ff"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_decorators.py",
+          "size": 32638,
+          "sha256": "352ed2290bed0e09ec01ddfb9a3aadc0f875f6d779ec527af4bb1c78ee52cb02"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_decorators_v1.py",
+          "size": 6185,
+          "sha256": "b5f75f76940a6384765c23b0a876d97a840cbabe95362811adf86e757047c77f"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_discriminated_union.py",
+          "size": 25478,
+          "sha256": "68c9744914b24321df5b8fa49673131cdbf0491a2a1371f73d157fd39bd1b138"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_docs_extraction.py",
+          "size": 3831,
+          "sha256": "a7e49316f2c7533c6b8fa6db9696800185a6ab820dc55080748ba90e0418488c"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_fields.py",
+          "size": 23205,
+          "sha256": "b4599a5f8ed0db3f100823c9e0af0cacf7e0283cedc7d7259edccfc41bf438aa"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_forward_ref.py",
+          "size": 611,
+          "sha256": "e67dd8efedc028b9fcfc54b761cecabad2e23d48725e602d90464e6859e89f03"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_generate_schema.py",
+          "size": 133821,
+          "sha256": "2d626c9af35d58387543163859e96c152c35fe749c3f011f25da703191f95789"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_generics.py",
+          "size": 23849,
+          "sha256": "0f5ff4c60aa72fa4c941efdf172692936520fc5fa44ff8d105f2e31c52c222a4"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_git.py",
+          "size": 809,
+          "sha256": "2303e1dc33df6b65eadeb06e07d371f25b91d80d62ebd41d7937d659722e0958"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_import_utils.py",
+          "size": 402,
+          "sha256": "4d18710f93ae63a094a2c8a805d05c254b34a26ec820e36265d60057bcd0f233"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_internal_dataclass.py",
+          "size": 144,
+          "sha256": "fdb79d7355dbbaeca044688b66a914930c05a506a847584a2e5479d359f2c926"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_known_annotated_metadata.py",
+          "size": 16213,
+          "sha256": "95800f89485f4a07e963aa87f7124f25310ca28c2fdbb4267323a0433cacf745"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_mock_val_ser.py",
+          "size": 8885,
+          "sha256": "c2645115206fa9f70b6c8e353ec165881e2ed80677989a597a21116c3df1293a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_model_construction.py",
+          "size": 35228,
+          "sha256": "d906b96381200688e486c547bb43a3a69854225598b955cc835282da8a5cd34b"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_namespace_utils.py",
+          "size": 12878,
+          "sha256": "08c1bb9c401755bf8876ac9ddc281dba546b33ecc45ce3dede46040c1aa748ac"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_repr.py",
+          "size": 5081,
+          "sha256": "b7b18dc9a514f31beac250c7c551362320de68d66b2bba74d688d03cfd1423fa"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_schema_gather.py",
+          "size": 9114,
+          "sha256": "54b12fe754d811e78d0f6733b32ae626ad4c56726a4ce9a72da9fb546e3873c0"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_schema_generation_shared.py",
+          "size": 4842,
+          "sha256": "17fadb41bae4a289a0c6cb24747a4fd23509ed309f7b40400c0124aba089e273"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_serializers.py",
+          "size": 1474,
+          "sha256": "a90dd16a4e09e9ba9b9e318246388063833ca682e8d2ce6a1f8eac5d949042e0"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_signature.py",
+          "size": 6779,
+          "sha256": "f049633c97b8a529daa6e8ab1b90e4040803d618201f1100cb314f1fef47d331"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_typing_extra.py",
+          "size": 28216,
+          "sha256": "3cedeed89997dc92a54c5cb4130f798b28c08181e026caaab247afe33a280762"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_utils.py",
+          "size": 15344,
+          "sha256": "89198248ed2ea058402ff0a11da61208aaecc294ab4476283bf6104857c22715"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_validate_call.py",
+          "size": 5321,
+          "sha256": "3df7559d2ce15ceac436d683a03c373c558f5580f95bf80d60f7bca77520e8b8"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_internal/_validators.py",
+          "size": 20610,
+          "sha256": "4c9711f5bc5c3d78f39ed37a42089bf1cc8f4641594311d6df64a828611ca749"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/_migration.py",
+          "size": 11907,
+          "sha256": "ffa54209558d601edf0e96cfd8ca96e1b5d7aa8d7b0b9fc9f74eeef7334941b3"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/alias_generators.py",
+          "size": 2124,
+          "sha256": "28cd67deee097cb48197552e620de1a181f35c90fecaf82b9eaf2ed5c73087f0"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/aliases.py",
+          "size": 4937,
+          "sha256": "be1087ca84969d7f8427ec166f9aa3e31c91b2c8065a74d07f3429e06499f6e8"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/annotated_handlers.py",
+          "size": 4407,
+          "sha256": "59fc854aac28108157061ed3ef73f270a9682350e25f8e465a2d3e24eb024786"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/class_validators.py",
+          "size": 148,
+          "sha256": "8bf5778fe3d87462d22e68ff20965e913463ba73bc488573f0b325aae3f23fb1"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/color.py",
+          "size": 21481,
+          "sha256": "033a867d540717ddbf65cb4372e7b40cce324e9d8fead7a49304483535ab2c8a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/config.py",
+          "size": 42048,
+          "sha256": "ae8cff15b7c53e8569255a41d46edd27c037b3082142374dfa8ceb0716cb4a13"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/dataclasses.py",
+          "size": 16644,
+          "sha256": "2b67bbe9bfc28f5cafc1cc1f25547b9d09cba0f75eb558a0e721d5306bb39291"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/datetime_parse.py",
+          "size": 150,
+          "sha256": "402f9680cc4caffc10fe6357512ec055ffb684b121befb0f6353d0ca148639d9"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/decorator.py",
+          "size": 145,
+          "sha256": "617fa3500a6ee4029a55628fa1a57e9fee25ed46d2ebd184b7d45ade1b3398a2"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/class_validators.py",
+          "size": 10245,
+          "sha256": "af07cfd7ae718adcb7e9fa32d4d34283825ff52ba5e38b092d6f80e6cb1e6a12"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/config.py",
+          "size": 2663,
+          "sha256": "93f96c564e7ba5ac4b24e701b9e1f4edcbb53a012059d541c66ea57da0b70825"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/copy_internals.py",
+          "size": 7616,
+          "sha256": "2aed0b1cb114d167282089cd1e5b3b3e3b81be92c54d0e14bacefb8d0dd88b4f"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/decorator.py",
+          "size": 10845,
+          "sha256": "4c19ba6c9ef026c36287ff16ab92330dcc0fdf69bdfef7f1b3de9d7ac2ee934d"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/json.py",
+          "size": 4657,
+          "sha256": "1e55821b7e5146bc72cee4d2e8b4d089907046198365699ea901fcacb5bac00f"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/parse.py",
+          "size": 2511,
+          "sha256": "1b377a6ff83ccc95dcb84ed046ae5a761c7f10c25a8577dca57085d1182baaa2"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/deprecated/tools.py",
+          "size": 3330,
+          "sha256": "36b9bda054595a9f3e8e57ef3e02482c4b32c29e18cd90f9d972063c32f11dc2"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/env_settings.py",
+          "size": 148,
+          "sha256": "e881de79612a9543d152fdd5f805e217f5bdd5f836270fccdced25df827f7b20"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/error_wrappers.py",
+          "size": 150,
+          "sha256": "44aea6a804dcf72303f8a043f48252f47a4a0a9ad61ddf30a3ce019e6fb77d1f"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/errors.py",
+          "size": 6002,
+          "sha256": "edcb41342b6de7b919171ef52ecd87f3a22e7d0011bf8c0f29ff0385db159f9c"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/experimental/__init__.py",
+          "size": 328,
+          "sha256": "8f4f1e44e7f3fb15b893f5fd5b89b6016dba215772177120d4ece5206035d6f9"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/experimental/arguments_schema.py",
+          "size": 1866,
+          "sha256": "1059e35ffba5a7eb4fc948d05f9a6642dba0d4e14bfc071cf1b70c6cb77e7d56"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/experimental/pipeline.py",
+          "size": 23910,
+          "sha256": "ce76cc06f8abdf1bcf036d178fc328728d6824c3dfd55615ac843c29036d0e53"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/fields.py",
+          "size": 64416,
+          "sha256": "f4acb59d329a3214e168d91512424e1474071aad8508a4b003afb3c1407e296a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/functional_serializers.py",
+          "size": 17102,
+          "sha256": "de6f35ba71f7958a2f74c8b4d28672c251e19f5283cfd5f608ede24ed0726ba0"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/functional_validators.py",
+          "size": 29560,
+          "sha256": "fb263aba3ffdfc6008e1aaaa7d9973c86773b34ea1bb3cbaccd583ed3269dffd"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/generics.py",
+          "size": 144,
+          "sha256": "d19a99f4ef5a9e7223ff7986051aa9b3886d7b2ddbe65575f9ddad5313cc3270"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/json.py",
+          "size": 140,
+          "sha256": "647f11908ee1e01cfece9f0e7530316c952856f72853e8e131d459d01fa4d317"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/json_schema.py",
+          "size": 115430,
+          "sha256": "2a1b12fcc58fa31d0f62a9259e125c6ffdee88256b10e832846e7771466fe900"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/main.py",
+          "size": 81012,
+          "sha256": "bfaedae3e9c5a280be189d681e04bffd59b7f7d620a7f347fb55b31d7c2314cd"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/mypy.py",
+          "size": 59265,
+          "sha256": "b5afa506655df0fe12ee9c76aa65a6faacaa4a405da9f05e388ccc8a553489f6"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/networks.py",
+          "size": 41446,
+          "sha256": "fd8a529c147690c7e8597efab1dab7e1c7c21fe316af9a2bd2f7b4b68c3b396a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/parse.py",
+          "size": 141,
+          "sha256": "c2477cd9d82dbd6b43f3de54fc8e84d61b6a3251a1052604577f5cb8149ea370"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/plugin/__init__.py",
+          "size": 6965,
+          "sha256": "e5c5cc9aee712f82d566158f1355c3f28cc767ea840b6face2c78b7bcb5b37f6"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/plugin/_loader.py",
+          "size": 2167,
+          "sha256": "9c8dd210aaf49a5081e79ea4bdbc815e3610c3d6ffb3c513284f50ea21125fab"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/plugin/_schema_validator.py",
+          "size": 5267,
+          "sha256": "41b9aab06df730199fb4d4369cd8ae376d8b85badec5403b8a90d5bf7274d815"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/py.typed",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/root_model.py",
+          "size": 6279,
+          "sha256": "4825e1a510a06607ea13d0065494c2ee4300a2329f7cbecf5788b4a9cc0e326d"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/schema.py",
+          "size": 142,
+          "sha256": "56aaa3beafcb9daa5592779b51ddc1a7f275a768176599d94602f8f1b5441bba"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/tools.py",
+          "size": 141,
+          "sha256": "88742977c489e43093b4f5796ad015d3a4fcf5b8d268c15e659d8b5fd95ab196"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/type_adapter.py",
+          "size": 31171,
+          "sha256": "637344d18845c31c28aab614f5c696ca62d6a7502fab8b1151d6f9b34d51a099"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/types.py",
+          "size": 104781,
+          "sha256": "9964ef407fd6b7f09c7107041d88dc516a72a23d54d3858e9eb32c318a1dffae"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/typing.py",
+          "size": 138,
+          "sha256": "3fb7de037e4cc1370bb11d6e2fb75bd12fa8c9d071a1b9976b9e580e80606a34"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/utils.py",
+          "size": 141,
+          "sha256": "d799d1d90a6a4c1165415e1336d4c8b4cc93271fdf6f257e80f988118d46a287"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/__init__.py",
+          "size": 2946,
+          "sha256": "4b140f925801b385c727013a059f6aa1ec18a0688dc98527987cc414265b7e72"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/_hypothesis_plugin.py",
+          "size": 14847,
+          "sha256": "e444b9c56bb0d45400b3298b7b3cbc4209d5cf466955f5378e4993ef81f6ed54"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/annotated_types.py",
+          "size": 3157,
+          "sha256": "ba4d8d000c6a88d10b2a388787287129a20e87c1759585bf2f3ad6dd7ee86417"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/class_validators.py",
+          "size": 14672,
+          "sha256": "50b39a21481850306c1cbec411511aadc33e52e6ca52082837c8526c3a27b051"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/color.py",
+          "size": 16844,
+          "sha256": "8990012d8a7a395a28d801643fd229ae2ff049cebe2a496ef18ba149aaed7798"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/config.py",
+          "size": 6532,
+          "sha256": "6ba3f459eafdc7871bc0a5bb5eff29a1252a33858ff912d6c17e9832962af400"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/dataclasses.py",
+          "size": 18172,
+          "sha256": "efce1caaf2276f020f5abf6eb1fa57ddc87bcf8b77276b532ba374ebbff0935a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/datetime_parse.py",
+          "size": 7724,
+          "sha256": "e10cb5910a6adeb3556497881de48f0e9b92d81be1a7528fb73246d71bbe1f4d"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/decorator.py",
+          "size": 10339,
+          "sha256": "cda6b1c71a163c29bcd7c0f56ecd3285aa518d79b7d95f06d191d609d335b970"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/env_settings.py",
+          "size": 14105,
+          "sha256": "03d557c2d465d36018fa31f40b4a2ecb954dc377e2e85fe9933b870e380000e3"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/error_wrappers.py",
+          "size": 5196,
+          "sha256": "ebadb931fc3daa40b63708ad07f2450167bc07e5efeb3054eeb2fd936f2d7f2a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/errors.py",
+          "size": 17726,
+          "sha256": "988c0f103e6f18ce50e6fe02e19d493e5753447fa89af132947ea4b0c84e98fc"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/fields.py",
+          "size": 50649,
+          "sha256": "56a5890ab894362132a6d5eba03549e74d49a550347a7d9500d724b2a5cbd9bf"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/generics.py",
+          "size": 17871,
+          "sha256": "5730bd61457e11b3e94376807e4d5c3457a3efdfc8cf39e443b5ab9934d94bd1"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/json.py",
+          "size": 3390,
+          "sha256": "590e47cbf848a5f751dd84bc93a37613a28c273b1d6c18bf95d58e3c9695f353"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/main.py",
+          "size": 44824,
+          "sha256": "cee36974de50d15d301b65144cab741d4cb75c9e0e02f3d26437625d8f85233b"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/mypy.py",
+          "size": 38949,
+          "sha256": "02265892fd76efe5ac80bf6fc2f2ea8f4752f1dcfe1d431b1fd62fbe5ab86df1"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/networks.py",
+          "size": 22124,
+          "sha256": "1d836d2807ce98e9ca269b0383583a488923f563e153ffa2f25e5ed89281a46e"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/parse.py",
+          "size": 1821,
+          "sha256": "049b5daa2651b5abfd55114298ec6863e2889909a33f2f80fcda288e21546716"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/py.typed",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/schema.py",
+          "size": 47801,
+          "sha256": "6aa06e03ef9cabc8005648a6e4124f140487cce67c745b66157fdf346afa8a9e"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/tools.py",
+          "size": 2881,
+          "sha256": "d650dd5c79348cbe6e3f7bb9442600bd402518296000efb8e6592af63edfc810"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/types.py",
+          "size": 35455,
+          "sha256": "165b71e46a0ffea69498092d946cfb9c57896b5df2372dc5635f9170ccc456df"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/typing.py",
+          "size": 19720,
+          "sha256": "1cdb6e2af807e041c879bdb2b6477b552c86ea6c4ff512aa12a12a97ed5a6f5e"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/utils.py",
+          "size": 25989,
+          "sha256": "339151c9f3546f50369a4f6568680255d7c71dbdc0b5082b8cee6a7f205fe310"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/validators.py",
+          "size": 22187,
+          "sha256": "9725249f5316847c65097e597c48058ff0801e88e888f71a41e31d10cf57be25"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/v1/version.py",
+          "size": 1039,
+          "sha256": "1d79d75bed5b316e6a2a196be5180e10fa21ad90c20d2bb2cbcfa08bc182819a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/validate_call_decorator.py",
+          "size": 4389,
+          "sha256": "f23a8b9605d38d6123e1d5c3834c08dc41902a46f42670ac2ff2525236d4e528"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/validators.py",
+          "size": 146,
+          "sha256": "a706c825755bd42576980138c3f1067cd8fb0f0cec29a5b0fed4cbe9cbe24eeb"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/version.py",
+          "size": 2710,
+          "sha256": "243862b183ca3a2636370072ccd57f86b97e7159fd21303f8212f089207ed9ff"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic/warnings.py",
+          "size": 3772,
+          "sha256": "82a0d3436157ef018b6495775dba104a2457287927b2cde97c83972f40435d39"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/INSTALLER",
+          "size": 4,
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/licenses/LICENSE",
+          "size": 1129,
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/METADATA",
+          "size": 67970,
+          "sha256": "f791b40bde997db7ff175b238bff97d50cf9505a8aa307e0bf791d57ed1ae282"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/RECORD",
+          "size": 15376,
+          "sha256": "3023646f6fb33f143125df861af5b68d2c7a3f95c0e0eb0fd397367eeea25171"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/REQUESTED",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic-2.11.7.dist-info/WHEEL",
+          "size": 87,
+          "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core/__init__.py",
+          "size": 4547,
+          "sha256": "97fba68b21328d4af0816785bad91cff4980d2f1d539436106811599d0801f57"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core/_pydantic_core.cp311-win_amd64.pyd",
+          "size": 5282304,
+          "sha256": "d4c06d29c37daf590650a68d3936d6270d7d16b7f653a5464873a667fe00efb1"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core/_pydantic_core.pyi",
+          "size": 44398,
+          "sha256": "2fc3d8ecda3246dd80107ae6e9295ec12450492e4da2a93e852f9a4011c497cf"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core/core_schema.py",
+          "size": 153980,
+          "sha256": "0dde97753c3b138c1e3d661ab7d5aed86fcb89f68389db386e3869134626ace2"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core/py.typed",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/INSTALLER",
+          "size": 4,
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/licenses/LICENSE",
+          "size": 1101,
+          "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/METADATA",
+          "size": 6883,
+          "sha256": "904297200149e3a7d901f4dee47a94b2ba4819b88c1b70e29d6cf1809028e24a"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/RECORD",
+          "size": 1084,
+          "sha256": "00a32176d6c9de35487a418b74cd83ce5a302f5fb8a2684d73b86f31ef0b3037"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/REQUESTED",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/pydantic_core-2.33.2.dist-info/WHEEL",
+          "size": 96,
+          "sha256": "b4019d7380b6293cfb076099f097f70dc29202f8806c2838e141fd99ada0630c"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection/__init__.py",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection/introspection.py",
+          "size": 22534,
+          "sha256": "743e4077827a8407c5e9407304ee2ca92b35876c9b4154e1910a1f2d659504fd"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection/py.typed",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection/typing_objects.py",
+          "size": 16912,
+          "sha256": "5da5a3e85fd981d806ed0f3f639a71dc1008ea415c885b8a3c9452588b722648"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection/typing_objects.pyi",
+          "size": 9179,
+          "sha256": "06ee9681c02d9220c62ce571820dc59c69c85c0517c67cc3ff28050be5cd52e6"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/INSTALLER",
+          "size": 4,
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/licenses/LICENSE",
+          "size": 1090,
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/METADATA",
+          "size": 2552,
+          "sha256": "67abbcb9113094d0e1d1ae7e38de2d176765555ace9509ac21eb5cd490c24894"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/RECORD",
+          "size": 1174,
+          "sha256": "7ee1fdb206e8b9f5c9570d56a7d8d8b5b9828f17b2dbd0b5d0e8d777b097cdeb"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/REQUESTED",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/kimodo/deps/typing_inspection-0.4.1.dist-info/WHEEL",
+          "size": 87,
+          "sha256": "aad0b0a12256807936d52d4a6f88a1773236ae527564a688bab4e3fe780e8724"
+        },
+        {
+          "path": "runtime/kimodo/notices/eigen-COPYING.MPL2",
+          "size": 16726,
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        },
+        {
+          "path": "runtime/kimodo/notices/eigen-COPYING.README",
+          "size": 779,
+          "sha256": "c83230b770f17ef1386ea1fd3681271dd98aa93646bdbfb5bff3a1b7050fff9d"
+        },
+        {
+          "path": "runtime/kimodo/notices/ggml-AUTHORS",
+          "size": 14359,
+          "sha256": "922076fa7d30acba9058abe144b9fe22815d26ac2ec3241e02977a20dd5df218"
+        },
+        {
+          "path": "runtime/kimodo/notices/ggml-LICENSE",
+          "size": 1078,
+          "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+        },
+        {
+          "path": "runtime/kimodo/notices/kimodo-cpp-LICENSE",
+          "size": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "runtime/kimodo/notices/kimodo-cpp-NOTICE",
+          "size": 193,
+          "sha256": "28310411f552794fcf198a936fb8f8486d15af3afd83aecb69f67793852f761f"
+        }
+      ],
+      "artifacts": [
+        {
+          "kind": "zip",
+          "size": 4127665,
+          "sha256": "1b583e97efceea7b66740f8f4daa70a232bfca47d38cedbf6056ffc62ca404e8",
+          "urls": [],
+          "target": null,
+          "mappings": [],
+          "parts": [
+            {
+              "size": 4127665,
+              "sha256": "1b583e97efceea7b66740f8f4daa70a232bfca47d38cedbf6056ffc62ca404e8",
+              "urls": [
+                "https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-kimodo-runtime-hybrid-v1-2838514d73df.zip.part-001"
+              ]
+            }
+          ]
+        }
+      ],
+      "source": "https://github.com/nv-tlabs/kimodo/tree/e1c219c99b4b94ba48be1fb6a1cbc64ecee4c954",
+      "note": "Verified PoseSnap runtime pack. Every download part is checked and installed automatically."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+.reference-scroll {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.reference-scroll .reference-canvas { flex: 1 0 160px; }
+.reference-scroll .reference-canvas.empty-reference { flex-basis: auto; }
+.reference-scroll .reference-footer { flex-shrink: 0; }

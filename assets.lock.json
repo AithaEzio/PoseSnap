@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "python": "3.11.9",
+  "webview2": "154.0.4258.62",
+  "torch": "2.8.0+cu128",
+  "files": {
+    "models/body/model.ckpt": {
+      "size": 2109129346,
+      "sha256": "b5a2f9d305dd02626b967aa2e86021fba07065df66ce7a7e00ffb9664f150abf",
+      "source": "https://huggingface.co/facebook/sam-3d-body-dinov3"
+    },
+    "models/body/model_config.yaml": {
+      "size": 1488,
+      "sha256": "1012fc3f39cb5e90e3f8fbadf7bded31604bfafdce0321d17a7c1a2d3f08b88d",
+      "source": "https://huggingface.co/facebook/sam-3d-body-dinov3"
+    },
+    "models/body/assets/mhr_model.pt": {
+      "size": 696110248,
+      "sha256": "352e271a6c42729c68554ceaea0c955e866970160c31e35506d782dc0f7377bc",
+      "source": "https://huggingface.co/facebook/sam-3d-body-dinov3"
+    },
+    "models/camera/model.pt": {
+      "size": 1323815904,
+      "sha256": "280741fd09bc3f403ccff9967784c2a391b52d2c0742ae3efdb21d9f90cc1a01",
+      "source": "https://huggingface.co/Ruicheng/moge-2-vitl-normal"
+    },
+    "models/detection/yolox_s.onnx": {
+      "size": 35858002,
+      "sha256": "c5c2d13e59ae883e6af3b45daea64af4833a4951c92d116ec270d9ddbe998063",
+      "source": "https://github.com/Megvii-BaseDetection/YOLOX/releases/tag/0.1.1rc0"
+    },
+    "models/segmentation/sam2.1_hiera_tiny.pt": {
+      "size": 156008466,
+      "sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+      "source": "https://github.com/facebookresearch/sam2"
+    }
+  },
+  "sources": {
+    "sam-3d-body": "b5c765a0d89d789985e186d396315e7590887b94",
+    "MoGe": "74fbce054ebed49800de42d0ad0e83495065719a",
+    "sam2": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "dinov3": "6876159a11b4df116f30f667f8c9888617df0751"
+  }
+}

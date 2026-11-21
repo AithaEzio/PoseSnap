@@ -1,0 +1,29 @@
+import type {HelpTopic} from './help';
+export const guidanceHelp:HelpTopic[]=[
+  {id:'image-guidance',title:'Depth, normals and albedo guidance',tag:'Image guidance · ShadeNet · Automatic · Detailed · Off',text:'Image guidance applies to the next extraction. Changing it keeps your accepted pose and Studio edits.',bullets:[
+    'Choose Off to extract without optional image guidance. MoGe-2 handles photo geometry.',
+    'Automatic uses baseline extraction while the pose cues are in qualification. The extraction status and Pose notes report the outcome.',
+    'Image maps offers Standard and Detailed inspection. Detailed takes longer because ShadeNet runs six passes. It leaves the accepted pose unchanged.',
+    'If optional files or processing are unavailable, PoseSnap retains original extraction and records a note. To compare, choose Off in Image guidance and run the normal extraction again.'
+  ],paragraphs:['Choose Image guidance in Extract pose or Settings → Extractions. In Settings → Engine, choose Image guidance and explicitly download the optional components once. Processing is local; no API key or account is needed. Detailed consumes more CPU memory and time.','Image maps opens an inspection area separate from Pose preview. Inspect Original, Depth, Normals and Albedo; Geometry maps uses the prepared MoGe-2 maps. Inspection leaves the accepted pose unchanged.'],sources:[{title:'ShadeNet-5 model and limitations · reviewed 16 Nov 2026',url:'https://huggingface.co/singam96/ShadeNet-5-35M'}]},
+  {id:'guidance-depth-input',title:'Import a photograph or an existing depth image',tag:'Extract pose · Relative depth · Metric depth · White near · Original precision',text:'Choose the input type explicitly. A grayscale picture is not automatically a calibrated depth map. Choose Photo or Depth in Add as. Settings → Extractions → Depth input type selects Relative or Metric for future Depth imports. Previously imported references retain their recorded type.',paragraphs:[
+    'Relative depth defaults to brighter = nearer, matching the depth pose gallery. Zero intensity can be a valid relative depth. Different normalized images do not share a known distance scale.',
+    'Metric depth needs a declared camera-Z or ray-distance encoding, positive unit scale and calibrated camera frame. Ray distance requires a perspective camera. Depth settings accepts known centimetres per source value, camera-Z or ray-distance encoding, and matching version 2 camera calibration JSON. Relative output is never converted into metric data merely by changing this preference. Import original PNG/TIFF files for metric data; clipboard images can discard numeric precision.',
+    'Existing depth input bypasses ShadeNet and MoGe prediction. Original bytes and bit depth stay separate from normalized display pixels. Relative ordering and calibrated metric normals describe visible surfaces. Inspect metric normals after setting the units and camera.',
+    'Surface depth belongs to skin or clothing, not an internal joint centre. Background, edges, depth jumps, uncertain ownership and occluded anatomy are excluded from surface cues. Relative grayscale cannot recover exact joint depth or hidden bone twist.',
+    'The body estimator interprets the visible depth silhouette. Inspect the pose and use Pose Studio to correct uncertain joints.'
+  ],sources:[{title:'Gallery bright-near convention and individual-reference terms',url:'https://ai-pose-depth-gallery.pages.dev/'},{title:'Depth unprojection requires units and intrinsics',url:'https://www.open3d.org/docs/release/python_api/open3d.geometry.PointCloud.html'}]},
+  {id:'guidance-evidence',title:'What each map can and cannot improve',tag:'Normals · Albedo · Surface depth · Confidence · Ownership · Accuracy',text:'These are alternative measurements of one physical view. They do not count as additional cameras or independent photographs.',bullets:[
+    'Depth can suggest which visible surface is nearer. Learned scale is uncertain. ShadeNet depth direction is not independently verified in this integration, so its grayscale is displayed rather than used as metric geometry.',
+    'Normals describe visible surface orientation. Hidden joint twist remains uncertain.',
+    'Albedo estimates base colour with some lighting removed. Albedo is available for inspection. Its usefulness for uncertain landmarks is evaluated separately.',
+    'Guidance requires a verified person mask, reliable anatomical sides and visible landmarks. Overlapping people are evaluated separately.',
+    'Raw inference and derived guidance have separate identities. Editing a camera reuses image measurements; changing guidance invalidates a pending fit. Saved poses keep the evidence used to create them.'
+  ]},
+  {id:'guidance-moge',title:'Geometry engine: MoGe-2',tag:'MoGe-2 · GPU · Memory · Offline · Geometry',text:'MoGe-2 ViT-L Normal handles photo geometry for Extract pose.',paragraphs:[
+    'MoGe estimates visible surface geometry and camera information. Estimated surface distance is not an internal joint centre or verified physical distance.',
+    'Older accepted poses retain their recorded provenance and editable channels. Missing legacy geometry evidence requires an explicit rebuild and Apply; opening history never silently regenerates it.',
+    'Neural stages run sequentially. Original images remain on disk and compatible maps are cached independently of rigs and camera edits.',
+    'Controlled image-guidance tests have not passed the 10% median improvement or absolute pose-accuracy gates. Neither prepared maps nor solver convergence prove a more accurate pose. Inspect results and use Studio for precise adjustments.'
+  ],sources:[{title:'Official MoGe documentation · reviewed 17 Nov 2026',url:'https://github.com/microsoft/MoGe'}]}
+];

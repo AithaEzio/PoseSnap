@@ -1,0 +1,196 @@
+// PoseSnap: selected-face connection is read-only; application changes facial drivers only.
+(function(){
+  var job=__POSESNAP_CONFIG__,undoStarted=false,ledgerItem=null,ledgerBefore=null,ledgerCreated=false,ledgerFigure=null;
+  function cancelled(){if(new DzFileInfo(job.cancel).exists()){throw new Error("Expression task cancelled");}}
+  function ack(value){value.version=1;value.jobId=job.jobId;var file=new DzFile(job.ack);if(!file.open(DzFile.WriteOnly)){throw new Error("Cannot acknowledge expression task");}file.write(JSON.stringify(value));file.close();}
+  function phase(name){cancelled();if(!job.status)return;var file=new DzFile(job.status);if(file.open(DzFile.WriteOnly)){file.write(JSON.stringify({version:1,jobId:job.jobId,phase:name}));file.close();}}
+  function facial(id,path){
+    // Genesis 9's native hidden PowerPose dials feed its FACS controls. Include
+    // the audited facial IDs, never arbitrary body or vendor PowerPose dials.
+    var powerPose=/^powerpose_ctrl_(BareTeeth|BrowOuterUp|BrowUp-Down[LR]?|CheeksPuff-Hollow|CornerForward-Back|CornerUp-Down|EyesSquint-Widen[LR]?|LipsClose|LipsPucker-Press|NoseSneer|Wide-Narrow[LR]?)$/.test(id);
+    return powerPose||/^(facs_(bs|ctrl)_|CTRLJaw|eCTRL(Brow|Eyes?|Eyelid|Lip|Mouth|Jaw|Nose|Cheek|Viseme|Tongue))/.test(id)||(/^eCTRL/.test(id)&&/expressions/i.test(path))||/^(Pose Controls|Actor)\/Head\/Expressions(\/|$)/i.test(path);
+  }
+  function numeric(prop){return prop&&typeof prop.getMin==="function"&&typeof prop.getRawValue==="function"&&typeof prop.getDefaultValue==="function"&&!prop.inherits("DzAliasProperty");}
+  function canonical(prop){
+    // isAlias()/getAliasTarget() are the DAZ API; aliases need not inherit a
+    // class named DzAliasProperty (Genesis 9 exposes morph aliases on head).
+    var seen={};for(var depth=0;prop&&typeof prop.getAliasTarget==="function";depth++){
+      var target=prop.getAliasTarget();if(!target)return prop;var owner=prop.getOwner(),key=String(owner.elementID)+"#"+String(owner.getName())+"#"+String(prop.getName());
+      if(depth>32||seen[key])throw new Error("A facial property alias is cyclic. Your scene was preserved.");seen[key]=true;prop=target;
+    }return prop;
+  }
+  function propertyKey(prop){prop=canonical(prop);var owner=prop.getOwner();return (typeof owner.elementID==="number"?String(owner.elementID):String(owner.getName()))+"#"+String(prop.getName());}
+  var graphChecks=0;
+  function checkGraph(){if(++graphChecks>8192)throw new Error("This facial controller graph is too complex to reset safely. Your scene was preserved.");if(graphChecks%64===0)cancelled();}
+  function facialNode(owner){return /^node:(lEye|rEye|l_eye|r_eye|lower[Jj]aw|tongue\d+|tongue_\d+)$/.test(owner);}
+  function driverId(prop,owner){return owner.indexOf("modifier:")===0?owner.substr(9):facialNode(owner)&&/^[xyz]Rotate$/i.test(String(prop.getName()))?owner.substr(5)+"."+String(prop.getName()):String(prop.getName());}
+  function controls(figure){
+    var list=[],seen=[],elements=[{element:figure,owner:"figure"}],object=figure.getObject();
+    var faceNodes=["head","lowerJaw","lowerjaw","lEye","rEye","l_eye","r_eye"];
+    for(var n=0;n<faceNodes.length;n++){var node=figure.findNodeChild(faceNodes[n],true);if(node){elements.push({element:node,owner:"node:"+String(node.getName())});}}
+    var children=figure.getNodeChildren(true);for(var n=0;n<children.length;n++){var name=String(children[n].getName());if(/^tongue\d+$|^tongue_\d+$/.test(name)){elements.push({element:children[n],owner:"node:"+name});}}
+    if(object){for(var m=0;m<object.getNumModifiers();m++){var modifier=object.getModifier(m);if(facial(String(modifier.getName()),"")){elements.push({element:modifier,owner:"modifier:"+modifier.getName()});}}}
+    for(var e=0;e<elements.length;e++){
+      var properties=elements[e].element.getPropertyList();
+      for(var p=0;p<properties.length;p++){
+        var prop=properties[p];if(!numeric(prop)){continue;}
+        // Aliases and their underlying drivers are not two independent controls.
+        if(prop.inherits("DzAliasProperty")){continue;}
+        var owner=elements[e].owner,id=driverId(prop,owner);
+        if(!(facial(id,String(prop.getPath()))||facialNode(owner)&&/^[xyz]Rotate$/i.test(String(prop.getName())))||seen.indexOf(id)>=0){continue;}
+        seen.push(id);var links=prop.getControllerList(),dependencies=[];
+        for(var c=0;c<links.length;c++){if(links[c].active){var input=typeof links[c].getProperty==="function"?links[c].getProperty():null;var inputOwner=input?input.getOwner():null;dependencies.push(input?(inputOwner&&inputOwner.inherits("DzModifier")?String(inputOwner.getName()):String(input.getName())):"unknown");}}
+        dependencies.sort();var unique=[];for(var d=0;d<dependencies.length;d++){if(!d||dependencies[d]!==dependencies[d-1])unique.push(dependencies[d]);}
+        list.push({id:id,owner:owner,property:String(prop.getName()),label:String(prop.getLabel()),min:Number(prop.getMin()),max:Number(prop.getMax()),default:Number(prop.getDefaultValue()),locked:prop.isLocked(),dependencies:unique,prop:prop});
+      }
+    }
+    return list;
+  }
+  function protectedPose(figure,preserveGaze){
+    var saved=[],nodes=[figure],children=figure.getNodeChildren(true);
+    for(var n=0;n<children.length;n++){nodes.push(children[n]);}
+    for(var n=0;n<nodes.length;n++){
+      var node=nodes[n],name=String(node.getName());
+      // Facial bones are legitimate outputs of the expression's own drivers.
+      // The figure and head transforms, and every body bone, remain protected.
+      var ancestor=typeof node.getNodeParent==="function"?node.getNodeParent():null,facialChild=false;
+      while(ancestor){if(String(ancestor.getName())==="head"){facialChild=true;break;}ancestor=ancestor.getNodeParent();}
+      var eyeNode=/^(lEye|rEye|l_eye|r_eye)$/.test(name);
+      if(facialChild&&(!eyeNode||preserveGaze===false)){continue;}
+      var getters=["getXPosControl","getYPosControl","getZPosControl","getXRotControl","getYRotControl","getZRotControl","getXScaleControl","getYScaleControl","getZScaleControl","getScaleControl"];
+      if(facialChild&&eyeNode){getters=["getXRotControl","getYRotControl","getZRotControl"];}
+      for(var g=0;g<getters.length;g++){if(typeof node[getters[g]]!=="function"){continue;}var p=node[getters[g]]();if(p){saved.push({prop:p,raw:p.getRawValue(),value:p.getValue()});}}
+    }
+    return saved;
+  }
+  function replaceableInput(input,channels,byId,visited,memo,depth){
+    // A derived control may already be active through the facial dials that
+    // this operation replaces. An independently keyed/unknown input is a
+    // conflict; never zero it or disable its ERC links to force the transfer.
+    if(!input){return false;}
+    var owner=input.getOwner(),id=driverId(input,owner&&owner.inherits("DzModifier")?"modifier:"+String(owner.getName()):owner&&owner.inherits("DzNode")?"node:"+String(owner.getName()):"figure");
+    if(byId[id]&&propertyKey(byId[id].prop)===propertyKey(input)&&channels.hasOwnProperty(id)){return true;}
+    if(Math.abs(input.getRawValue()-input.getDefaultValue())>0.00001){return false;}
+    // Inspect links structurally. Evaluating a cyclic/native controller first
+    // can recurse inside DAZ before the script's own cycle guard runs.
+    var key=propertyKey(input);
+    if(memo.hasOwnProperty(key)){return memo[key];}
+    if(depth>32||visited[key]){return false;}checkGraph();visited[key]=true;
+    var links=input.getControllerList();
+    for(var c=0;c<links.length;c++){if(!links[c].active){continue;}var next=typeof links[c].getProperty==="function"?links[c].getProperty():null;
+      if(!next||!replaceableInput(next,channels,byId,visited,memo,depth+1)){delete visited[key];memo[key]=false;return false;}}
+    delete visited[key];memo[key]=true;return true;
+  }
+  function appliedControls(figure){
+    ledgerFigure=figure;ledgerItem=figure.findDataItem("PoseSnapExpressionControlsV1");
+    if(!ledgerItem)return {};
+    if(typeof ledgerItem.getSettings!=="function")throw new Error("PoseSnap's expression record is unavailable; your scene was preserved.");
+    var text=String(ledgerItem.getSettings().getStringValue("record",""));
+    if(text.length>400000)throw new Error("Invalid PoseSnap expression record; your scene was preserved.");
+    var record=JSON.parse(text),result={};
+    if(record.version!==1||record.rigId!==job.rigId||Object.prototype.toString.call(record.drivers)!=="[object Array]"||record.drivers.length>2000)throw new Error("This figure's PoseSnap expression record does not match its generation.");
+    for(var i=0;i<record.drivers.length;i++){var d=record.drivers[i];
+      if(typeof d.id!=="string"||!/^\w[A-Za-z0-9_. -]{0,179}$/.test(d.id)||d.id==="__proto__"||result.hasOwnProperty(d.id)||typeof d.owner!=="string"||typeof d.property!=="string"||typeof d.default!=="number"||!isFinite(d.default)||Object.prototype.toString.call(d.regions)!=="[object Array]"||!d.regions.length||d.regions.length>5)throw new Error("Invalid recorded expression control; your scene was preserved.");
+      for(var r=0;r<d.regions.length;r++)if(!/^(brows|eyes|mouth|cheeks|gaze)$/.test(d.regions[r]))throw new Error("Invalid recorded facial region.");
+      result[d.id]=d;
+    }return result;
+  }
+  function recordedDriver(record,byId){
+    var d=byId[record.id];if(!d)return null;
+    if(d.owner!==record.owner||d.property!==record.property||Math.abs(d.default-record.default)>.00001)throw new Error("The previously applied control "+record.id+" changed. Refresh the face connection; your scene was preserved.");
+    return d;
+  }
+  function saveAppliedControls(figure,records,pending){
+    for(var i=0;i<pending.length;i++){var d=pending[i].driver,regions=records[d.id]?records[d.id].regions.slice():[];
+      for(var m=0;m<job.profile.mappings.length;m++){var mapping=job.profile.mappings[m];if(mapping.driver===d.id&&regions.indexOf(mapping.region)<0)regions.push(mapping.region);}
+      if(!regions.length)throw new Error("Missing region for applied control "+d.id);
+      records[d.id]={id:d.id,owner:d.owner,property:d.property,default:d.default,regions:regions};
+    }
+    var list=[];for(var id in records)if(records.hasOwnProperty(id))list.push(records[id]);
+    var text=JSON.stringify({version:1,rigId:job.rigId,drivers:list});
+    if(!ledgerItem){ledgerItem=new DzSimpleElementData("PoseSnapExpressionControlsV1",true);if(figure.addDataItem(ledgerItem)!==0)throw new Error("Cannot record the applied expression controls.");ledgerCreated=true;}
+    var settings=ledgerItem.getSettings();ledgerBefore=String(settings.getStringValue("record",""));settings.setStringValue("record",text);
+  }
+  function untouchedControls(figure,pending){
+    var keys={},saved=[],seen={},elements=[figure],object=figure.getObject();
+    for(var i=0;i<pending.length;i++)keys[propertyKey(pending[i].driver.prop)]=true;
+    var children=figure.getNodeChildren(true);for(var i=0;i<children.length;i++)elements.push(children[i]);
+    if(object)for(var i=0;i<object.getNumModifiers();i++)elements.push(object.getModifier(i));
+    // Preserve raw dial values. Native ERC correctives may change their evaluated
+    // shape as an expression changes; PoseSnap never writes those outputs.
+    for(var e=0;e<elements.length;e++){if(e%64===0)cancelled();var list=elements[e].getPropertyList();for(var p=0;p<list.length;p++){
+      var prop=list[p];if(!numeric(prop))continue;var key=propertyKey(prop);if(keys[key]||seen[key])continue;seen[key]=true;
+      var raw=Number(prop.getRawValue());if(!isFinite(raw))throw new Error("Invalid numeric control; your scene was preserved.");saved.push({prop:prop,raw:raw});
+    }}return saved;
+  }
+  try{
+    cancelled();var figure=Scene.getPrimarySelection();if(figure&&figure.inherits("DzBone")){figure=figure.getSkeleton();}
+    if(!figure||!figure.inherits("DzSkeleton")){throw new Error("Select a matching Genesis figure in DAZ Studio first");}
+    var uri=(String(figure.assetUri)+" "+String(figure.assetSource)).toLowerCase();
+    if(uri.indexOf("genesis8_1")>=0||uri.indexOf("genesis8.1")>=0){throw new Error("Genesis 8.1 has a separate facial rig. Select Genesis 8.0 or Genesis 9.");}
+    if(job.rigId==="g9"?!figure.findNodeChild("l_thigh",true):!figure.findNodeChild("lThighBend",true)){throw new Error("Select "+job.label+" to connect or apply this expression");}
+    if(job.rigId!=="g9"&&((job.rigId==="g8f"&&!/genesis8female|\/female\//.test(uri))||(job.rigId==="g8m"&&!/genesis8male|\/male\//.test(uri)))){throw new Error("Select "+job.label+" to continue");}
+    phase("controls");var available=controls(figure),byId={};for(var i=0;i<available.length;i++){byId[available[i].id]=available[i];}
+    if(job.connect){
+      var exported=[];for(var i=0;i<available.length;i++){var d=available[i];exported.push({id:d.id,owner:d.owner,property:d.property,label:d.label,min:d.min,max:d.max,default:d.default,locked:d.locked,dependencies:d.dependencies});}
+      var anatomy={tongue:!!figure.findNodeChild("tongue04",true),eyes:job.rigId!=="g9"};
+      if(job.rigId==="g9"){var children=figure.getNodeChildren(true);for(var n=0;n<children.length;n++){if(/genesis9eyes|genesis%209%20eyes/i.test(String(children[n].assetUri)+" "+String(children[n].assetSource)+" "+String(children[n].getName()))){anatomy.eyes=true;break;}}}
+      cancelled();ack({success:true,figure:String(figure.getLabel()),profile:{version:1,rigId:job.rigId,drivers:exported,anatomy:anatomy}});return;
+    }
+    var records=appliedControls(figure),channels={},metadata={},pending=[],resetIds=[],warnings=[];
+    if(job.zero){
+      phase("preflight");
+      for(var id in records){if(!records.hasOwnProperty(id))continue;var d=recordedDriver(records[id],byId);if(d)channels[id]=d.default;}
+    }else{
+      for(var id in job.expression.channels)if(job.expression.channels.hasOwnProperty(id))channels[id]=job.expression.channels[id];
+      for(var i=0;i<job.profile.drivers.length;i++)metadata[job.profile.drivers[i].id]=job.profile.drivers[i];
+      // Remove previous optional details only in an enabled, observed region.
+      // No ownership record means no implicit writes to someone else's dials.
+      var options=job.expression.options,unknown=job.expression.source.unknown;
+      for(var id in records){if(!records.hasOwnProperty(id)||channels.hasOwnProperty(id))continue;
+        var record=records[id],enabled=false;for(var r=0;r<record.regions.length;r++){var region=record.regions[r];if(options.regions[region]&&(unknown.indexOf(region)<0||(options.neutralRegions||[]).indexOf(region)>=0))enabled=true;}
+        if(enabled){var d=recordedDriver(record,byId);if(d){channels[id]=d.default;resetIds.push(id);}}
+      }
+      var tongueId=job.rigId==="g9"?"facs_bs_TongueOut":"eCTRLTongueIn-Out",tongue=byId[tongueId];
+      if(tongue&&!records.hasOwnProperty(tongueId)&&!channels.hasOwnProperty(tongueId)&&options.regions.mouth&&unknown.indexOf("mouth")<0&&Math.abs(tongue.prop.getRawValue()-tongue.default)>.00001)warnings.push("An existing tongue dial was kept because this figure has no PoseSnap record for it. Reapply the earlier tongue expression once through this version, then apply the new expression; or neutralize that dial in DAZ.");
+    }
+    var checkedInputs={};
+    for(var id in channels){if(!channels.hasOwnProperty(id))continue;var current=byId[id],value=channels[id];
+      if(!current||typeof value!=="number"||!isFinite(value)||value<current.min-.00001||value>current.max+.00001)throw new Error("Invalid expression control "+id+"; your scene was preserved.");
+      if(!job.zero&&resetIds.indexOf(id)<0){var expected=metadata[id];
+        if(!expected||current.owner!==expected.owner||current.property!==expected.property||Math.abs(current.min-expected.min)>.00001||Math.abs(current.max-expected.max)>.00001||Math.abs(current.default-expected.default)>.00001||JSON.stringify(current.dependencies)!==JSON.stringify(expected.dependencies))throw new Error("Facial metadata changed for "+id+". Refresh this generation’s face connection.");
+      }
+      if(job.zero&&Math.abs(current.prop.getRawValue()-value)<=.00001)continue;
+      if(current.locked)throw new Error("Unlock facial control "+current.label+" before "+(job.zero?"zeroing.":"applying."));
+      if(!job.zero){var controllers=current.prop.getControllerList();for(var c=0;c<controllers.length;c++){if(!controllers[c].active)continue;var input=typeof controllers[c].getProperty==="function"?controllers[c].getProperty():null;
+        if(!replaceableInput(input,channels,byId,{},checkedInputs,0))throw new Error("Another DAZ controller drives "+current.label+". PoseSnap kept that controller unchanged; neutralize it in DAZ before applying this expression.");
+      }}
+      pending.push({driver:current,value:value});
+    }
+    var tracked=0;for(var id in records)if(records.hasOwnProperty(id))tracked++;
+    if(job.zero&&!pending.length){cancelled();ack({success:true,figure:String(figure.getLabel()),zeroed:0,tracked:tracked,maximumError:0});return;}
+    if(!pending.length)throw new Error("No supported expression controls are enabled");
+    var bodyPlan=job.body?prepareBody(figure,job.body):null;
+    phase("snapshot");var preserved=untouchedControls(figure,pending.concat(bodyPlan?bodyPlan.pending:[])),changesGaze=job.zero;
+    if(!job.zero)changesGaze=!!job.expression.options.regions.gaze;
+    cancelled();beginUndo();undoStarted=true;if(bodyPlan)bodyPlan.apply();
+    var body=protectedPose(figure,!changesGaze);
+    phase(job.zero?"zero":"apply");for(var i=0;i<pending.length;i++){cancelled();pending[i].driver.prop.setValue(pending[i].value);}
+    phase("verify");var maximumError=0,actual={};
+    for(var i=0;i<pending.length;i++){var item=pending[i],raw=Number(item.driver.prop.getRawValue()),effective=job.zero?null:Number(item.driver.prop.getValue());
+      // Scoped zero verifies only its raw keys. Evaluating an unrelated native
+      // controller is unnecessary and may recurse inside third-party ERC code.
+      if(!isFinite(raw)||!job.zero&&!isFinite(effective))throw new Error("Invalid facial readback; the previous expression was restored.");
+      maximumError=Math.max(maximumError,Math.abs(raw-item.value));
+      if(!job.zero){var links=item.driver.prop.getControllerList(),controlled=false;for(var c=0;c<links.length;c++)if(links[c].active){controlled=true;break;}if(!controlled)maximumError=Math.max(maximumError,Math.abs(effective-item.value));}
+      actual[item.driver.id]=job.zero?{raw:raw}:{raw:raw,value:effective};
+    }
+    for(var i=0;i<preserved.length;i++)if(Math.abs(preserved[i].prop.getRawValue()-preserved[i].raw)>.00001)throw new Error("An unrelated dial changed; the previous expression was restored.");
+    for(var i=0;i<body.length;i++)if(Math.abs(body[i].prop.getRawValue()-body[i].raw)>.00001||Math.abs(body[i].prop.getValue()-body[i].value)>.00001)throw new Error("A body or head transform changed; the previous expression was restored.");
+    if(maximumError>.0001)throw new Error("DAZ adjusted the requested facial values; the previous expression was restored.");
+    if(bodyPlan)bodyPlan.verify();
+    cancelled();if(!job.zero)saveAppliedControls(figure,records,pending);cancelled();
+    acceptUndo(job.body?"PoseSnap pose + expression":job.zero?"PoseSnap zero applied expression":"PoseSnap expression");undoStarted=false;
+    ack({success:true,figure:String(figure.getLabel()),maximumError:maximumError,channels:actual,zeroed:job.zero?pending.length:0,tracked:tracked,reset:resetIds,warnings:warnings});
+  }catch(error){if(undoStarted){if(ledgerCreated){ledgerFigure.deleteDataItem(ledgerItem);}else if(ledgerBefore!==null){ledgerItem.getSettings().setStringValue("record",ledgerBefore);}cancelUndo();}ack({success:false,message:String(error),line:error.lineNumber});}
+}());

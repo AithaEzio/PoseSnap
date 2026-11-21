@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "components": [{
+    "id": "clue-body",
+    "label": "Body uncertainty · CLUE",
+    "version": "1.0.0 · body-prior diagnostics",
+    "required": false,
+    "roots": ["models/diagnostics/clue"],
+    "files": [{"path":"models/diagnostics/clue/sam3dbody_clue.safetensors","size":5944836,"sha256":"dd80913b928e0d36f1d30dfdd22cc44c4d20976e8172637aef6910c966c2f71f"}],
+    "artifacts": [],
+    "source": "https://huggingface.co/meghshukla/clue/tree/947d1d25c55837f723f6f1da49336483a032987d",
+    "note": "Optional estimated source uncertainty. Accept the upstream terms and import sam3dbody_clue.safetensors from your authorized download. Extract again to inspect it in Pose notes. Ordinary extraction works without this component; it does not change poses or spacing."
+  }]
+}
