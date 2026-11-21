@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "components": [
+    {
+      "id": "guidance-shade",
+      "label": "Image guidance \u00b7 Depth, normals and albedo",
+      "version": "ShadeNet-5 merged / 6f3c1b617ef0",
+      "required": false,
+      "roots": [
+        "models/guidance/shadenet5-mix-refined.onnx"
+      ],
+      "files": [
+        {
+          "path": "models/guidance/shadenet5-mix-refined.onnx",
+          "size": 35061482,
+          "sha256": "f273b36084478f6294f9acb7ec6bae50aacf973b4881e97aabdc35ed32ce2b3d"
+        }
+      ],
+      "artifacts": [
+        {
+          "kind": "file",
+          "size": 35061482,
+          "sha256": "f273b36084478f6294f9acb7ec6bae50aacf973b4881e97aabdc35ed32ce2b3d",
+          "urls": [
+            "https://huggingface.co/singam96/ShadeNet-5-35M/resolve/6f3c1b617ef052ba45453a6287771166f5e6ac59/onnx/shadenet5_mix_refined.onnx"
+          ],
+          "target": "models/guidance/shadenet5-mix-refined.onnx",
+          "mappings": []
+        }
+      ],
+      "source": "https://huggingface.co/singam96/ShadeNet-5-35M/resolve/6f3c1b617ef052ba45453a6287771166f5e6ac59/onnx/shadenet5_mix_refined.onnx",
+      "license": "Apache-2.0",
+      "note": "Optional CPU image maps. Pose-guidance accuracy is experimental; original extraction remains available."
+    },
+    {
+      "id": "guidance-shade-detail",
+      "label": "Image guidance \u00b7 Detailed six-pass",
+      "version": "ShadeNet-5 MIX / 6f3c1b617ef0",
+      "required": false,
+      "roots": [
+        "models/guidance/shadenet5-mix.onnx"
+      ],
+      "files": [
+        {
+          "path": "models/guidance/shadenet5-mix.onnx",
+          "size": 31397076,
+          "sha256": "2fc5356d1280aca64ba8d248ae1d11dd8150e1b557604ea2e56931d239552641"
+        }
+      ],
+      "artifacts": [
+        {
+          "kind": "file",
+          "size": 31397076,
+          "sha256": "2fc5356d1280aca64ba8d248ae1d11dd8150e1b557604ea2e56931d239552641",
+          "urls": [
+            "https://huggingface.co/singam96/ShadeNet-5-35M/resolve/6f3c1b617ef052ba45453a6287771166f5e6ac59/onnx/shadenet5_mix_int4_int8.onnx"
+          ],
+          "target": "models/guidance/shadenet5-mix.onnx",
+          "mappings": []
+        }
+      ],
+      "source": "https://huggingface.co/singam96/ShadeNet-5-35M/resolve/6f3c1b617ef052ba45453a6287771166f5e6ac59/onnx/shadenet5_mix_int4_int8.onnx",
+      "license": "Apache-2.0",
+      "note": "Optional slower Detailed processing. Reuses private Torch; no training dependencies."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Rigged Character by BLENDERJO
+Source: https://sketchfab.com/3d-models/rigged-character-6ead91e980434073bfb15799d3e674bb
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+The creator requests attribution. PoseSnap uses geometry extracted from the
+user-supplied Rigged character.blend, normalized to metres/Y-up and bound as
+65 rigid visual pieces to the existing Genesis target joints. Materials and
+rest fitting are adapted for the local preview. Source animations, Rigify
+controls, armatures and embedded scripts are not included in the app.
+The original source file remains unchanged. No endorsement is implied.

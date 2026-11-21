@@ -1,0 +1,32 @@
+// Combined application shares the expression transaction and ownership safeguards.
+function prepareBody(figure,spec){
+  var pending=[],verification=[],scale=[],axes=["X","Y","Z"],metadata={};
+  var all=[figure].concat(figure.getNodeChildren(true));
+  for(var i=0;i<all.length;i++){
+    var getters=["getScaleControl","getXScaleControl","getYScaleControl","getZScaleControl"];
+    for(var g=0;g<getters.length;g++){var p=all[i][getters[g]]();if(p)scale.push({prop:p,raw:p.getRawValue(),value:p.getValue(),root:i===0});}
+  }
+  for(var n=0;n<spec.pose.rig.nodes.length;n++)metadata[spec.pose.rig.nodes[n].id]=spec.pose.rig.nodes[n];
+  function add(prop,value,id){
+    if(!prop||!isFinite(value))throw new Error("Invalid body channel "+id);
+    if(prop.isLocked()){if(Math.abs(prop.getValue()-value)>.1)throw new Error("A required body channel is locked: "+id);return;}
+    pending.push({driver:{prop:prop},value:value});
+  }
+  for(var id in spec.pose.rotations){if(!spec.pose.rotations.hasOwnProperty(id))continue;
+    var node=figure.findNodeChild(id,true);if(!node||!metadata[id])throw new Error("Missing target body joint "+id);
+    for(var a=0;a<3;a++){
+      var prop=node["get"+axes[a]+"RotControl"]();
+      if(!prop)throw new Error("Missing body rotation "+id);
+      verification.push({prop:prop,value:spec.evaluated[id][a],id:id+"/"+axes[a]});
+      if((metadata[id].driven||[]).indexOf(axes[a].toLowerCase())<0)add(prop,spec.pose.rotations[id][a],id);
+    }
+  }
+  for(var a=0;a<3;a++){
+    var prop=figure["get"+axes[a]+"RotControl"](),value=spec.pose.rootRotation[a];add(prop,value,"figure orientation");verification.push({prop:prop,value:value,id:"root"});
+    if(spec.placement!=="keep"){prop=figure["get"+axes[a]+"PosControl"]();value=spec.pose.translation[a];add(prop,value,"figure position");verification.push({prop:prop,value:value,id:"position"});}
+  }
+  return {pending:pending,apply:function(){for(var i=0;i<pending.length;i++)pending[i].driver.prop.setValue(pending[i].value);},verify:function(){
+    for(var i=0;i<verification.length;i++)if(!isFinite(verification[i].prop.getValue())||Math.abs(verification[i].prop.getValue()-verification[i].value)>.1)throw new Error("DAZ adjusted "+verification[i].id+". Body and expression were rolled back.");
+    for(var i=0;i<scale.length;i++)if(Math.abs(scale[i].prop.getRawValue()-scale[i].raw)>.000001||scale[i].root&&Math.abs(scale[i].prop.getValue()-scale[i].value)>.000001)throw new Error("A scale changed. Body and expression were rolled back.");
+  }};
+}

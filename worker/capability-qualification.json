@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "date": "2026-10-22",
+  "report": "docs/stabilization-clue-results-2026-10-22.md",
+  "capabilities": {
+    "pose": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261022-body-v1",
+      "scope": "Static body compositions, supported hand gestures and independent finger edits for Genesis 8 Female, Genesis 8 Male and Genesis 9.",
+      "limits": [
+        "Complete instruction and creative-variety gates have not passed. Review each alternative before Apply."
+      ],
+      "componentSignature": "f3f5e244084e37edeab83a396f05d0581188e36fff127ac3b1c9044f776b4c80"
+    },
+    "controlled-edit": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261022-edit-v1",
+      "scope": "Sparse local edits and broader recomposition from an accepted pose, with protected regions and compatible pins.",
+      "limits": [
+        "Broader edits can still fail fitting. A conflicting or unverified result is not accepted."
+      ],
+      "componentSignature": "236074ba927ef097204f2c074cac0f5ee168da46fe28166e76a1925285f94cb7"
+    },
+    "floor": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261022-floor-v1",
+      "scope": "Bounded seated, kneeling, lying, crawling and supported inverted poses, with explicit support checks.",
+      "limits": [
+        "Support proxies do not establish natural balance. One-hand balances and unsupported contacts require Studio adjustment. No authored fallback replaces a failed Kimodo proposal."
+      ],
+      "componentSignature": "54ff2416691bd56a7c48a3f27d4b504e641fc9b82108dc1ed4910e8da9dc57b9"
+    },
+    "interaction": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261022-contact-v4",
+      "scope": "Front and side hugs, hip-height handholding, and owned hand-to-shoulder contacts across the three Genesis rigs.",
+      "limits": [
+        "47 of 48 base proxy scenes and all 47 attempted compatible-pin replays passed. One reversed Genesis 9 side hug still rejects. Custom surface contacts and other layouts remain unqualified."
+      ],
+      "componentSignature": "9e0d0c1d7d65d915b156f9b25357ba3630aa7696a543de4ecefac25e20ad5656"
+    },
+    "clue-body": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261023-clue-v2-cache-lifecycle",
+      "scope": "Estimated source uncertainty for the initial unprompted SAM body prior only.",
+      "limits": [
+        "Regional review of the initial body estimate is available. Final-pose accuracy and distance between people are excluded.",
+        "Warm overhead and unchanged extraction-output parity have not passed qualification. Uncertainty is not a guaranteed error bound."
+      ],
+      "componentSignature": "29e8e0be03af3b0bdebaf1769f254cac5d747988fba5a92e48c495066a5e32ba"
+    },
+    "relative-spacing": {
+      "status": "experimental",
+      "evidenceRevision": "stabilize-20261022-moge-surface-v1",
+      "scope": "Optional bounded translation from learned torso-surface depth in the reference camera, with Preview, Apply and Cancel.",
+      "limits": [
+        "Synthetic surface ordering is promising; final placement improvement is not qualified. Reference-camera depth is not verified physical distance or automatically DAZ world Z. Weak or conflicting evidence retains the current layout."
+      ],
+      "componentSignature": "4025b07730279df4a53be9c25cb523c8762279566f8efebe3f8e3d8ded224491"
+    }
+  },
+  "reviewedDate": "2026-10-23"
+}

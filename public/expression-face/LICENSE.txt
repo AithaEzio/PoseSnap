@@ -1,0 +1,13 @@
+Face Sculpting 108th (female)
+Artist: ComputerCat (@ComputerCats)
+Source: https://sketchfab.com/3d-models/face-sculpting-108th-female-b6638e38d0b24ec7be39b578df25727b
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+Derivative changes by PoseSnap: preview geometry reduction; local ordered mouth
+retopology with modest neutral lip-depth smoothing; continuous facial shape keys
+and jaw-frame corrective shapes; independent rigid eye directions; authored
+inner-lip lining, dental arches, gums, palate, oral cavity and bounded tongue;
+portable iris materials and sparse binary export. The original artist source
+file is unchanged. The artist does not endorse PoseSnap or these modifications.
+No DAZ geometry or morph deltas are redistributed.

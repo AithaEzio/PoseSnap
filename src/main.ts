@@ -1,0 +1,11 @@
+import { mount } from 'svelte';
+import App from './App.svelte';
+import './styles.css';
+import './engine.css';
+import './workspace-polish.css';
+import './refinement.css';
+import './settings.css';
+import './expression.css';
+import './text.css';
+import './reference.css';
+mount(App, {target: document.getElementById('app')!});

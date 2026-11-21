@@ -5,11 +5,11 @@
 
 **A moment. A pose. Yours.**
 
-Turn photos and words into editable Genesis poses—on your own PC.
+Turn photos and words into editable Genesis posesâ€”on your own PC.
 
-[**Download for Windows x64 · v1.0.1**](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-1.0.1-Windows-x64.zip) · [Watch the launch film](#watch-posesnap) · [Get started](#get-started) · [Technical guide](#under-the-hood)
+[**Download for Windows x64 Â· v1.1.1**](https://github.com/AithaEzio/PoseSnap/releases/download/v1.1.1/PoseSnap-1.1.1-Windows-x64.zip) Â· [Watch the launch film](#watch-posesnap) Â· [Get started](#get-started) Â· [Technical guide](#under-the-hood)
 
-**Windows x64 · Local processing · Genesis 8 & 9 · Source available**
+**Windows x64 Â· Local processing Â· Genesis 8 & 9 Â· Source available**
 
 <img src="docs/media/Hero.jpg" width="100%" alt="PoseSnap Pose Studio showing joint rotation controls and an editable mannequin">
 </div>
@@ -25,18 +25,25 @@ The complete 100-second launch film. Sound is optional. Waiting intervals were e
 
 https://github.com/user-attachments/assets/a85fcd09-58cc-46c7-b85b-56ad5f204716
 
-[Download the original 1080p film](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-Launch-1080p.mp4) · [Captions](docs/media/captions.vtt) · [Transcript and media credits](docs/MEDIA-CREDITS.md)
+[Download the original 1080p film](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-Launch-1080p.mp4) Â· [Captions](docs/media/captions.vtt) Â· [Transcript and media credits](docs/MEDIA-CREDITS.md)
 
 ## Get started
 
 1. **Download the Windows ZIP.** Choose the named Windows-x64.zip, not GitHub's automatic Source code archives.
 2. **Extract into a new, writable NTFS folder.** Open **PoseSnap.exe** and keep the whole folder together. Private WebView2 is included.
-3. **Set up your engines.** Open **Settings → Engine**, choose **Pose + Expression** or **All modes**, then click **Set up PoseSnap**. Leave the app open while it downloads, verifies and installs the components.
+3. **Set up your engines.** Open **Settings â†’ Engine**, choose **Pose + Expression** or **All modes**, then click **Set up PoseSnap**. Leave the app open while it downloads, verifies and installs the components.
 4. **Create and inspect.** Open, drop or paste a reference photo, or visit Text to Pose. Preview the result, refine it in Studio, then use **Open in DAZ Studio** or **Save DUF**.
 
 No account, API key, subscription, system Python or terminal command is needed for ordinary app setup. Required engines have download sources; Pause/retry preserves checked resumable parts. After installation, image processing and generation run locally.
 
 **Body connections are optional.** Built-in rigs support Genesis 8 Female, Genesis 8 Male and Genesis 9. Connect a selected figure only when you want to read its compatible rig metadata. Expression export uses a separate facial connection so PoseSnap can discover the available controls.
+
+## Whatâ€™s new in v1.1.1
+
+- Extract one Photo or Depth reference at a time. Relative depth uses brighter values for nearer surfaces. Metric depth requires original units and camera calibration.
+- Install optional **Image maps** in Settings â†’ Engine (about 66 MB) to inspect ShadeNet depth, normals and albedo. Automatic guidance can retain baseline extraction when it lacks usable evidence.
+- History preserves saved participants when detections change, keeps distinct face observations separate, and restores the correct fit notes with Undo and Redo.
+- In focused tests, the Rust worker exchange used about half the transient allocation, and archive inventory lookup fell from 59.6 ms to 1.3 ms. Warm native startup was 219 ms on both tested builds.
 
 ## From a photograph to a pose
 
@@ -118,7 +125,7 @@ Before updating, back up your own **data** folder and preserve the previous work
 
 The application code has different rules: noncommercial software distributions retain attribution and provide corresponding source; commercial app/code redistribution and commercial hosted generation require separate permission. See [the licence](LICENSE). This is **source-available software**, not an OSI open-source licence. Upstream models, artwork and your input materials retain their own terms.
 
-[Download the reviewed application-source snapshot](https://github.com/AithaEzio/PoseSnap/releases/download/v1.0.1/PoseSnap-Source-v1.0.1.zip) · [Developer instructions](docs/DEVELOPING.md)
+[Browse the tagged v1.1.1 source](https://github.com/AithaEzio/PoseSnap/tree/v1.1.1) Â· [Developer instructions](docs/DEVELOPING.md)
 
 ## Under the hood
 
@@ -146,18 +153,18 @@ The local 5 November 2026 repair build passed **330 frontend, 321 worker and 50 
 
 These are distinct evidence classes. The full photographic neural-quality suite and live DAZ behaviour were not requalified in that pass. Floor and partner-contact workflows retain experimental labels. The unsigned Windows release and other hardware/native-DPI configurations have corresponding limits. Runtime-ready badges describe health, not model-quality certification.
 
-Use the [release checksum](https://github.com/AithaEzio/PoseSnap/releases/tag/v1.0.1) and the manifest inside the Windows ZIP for the exact uploaded package. The public source snapshot excludes private evaluation data and is not a promise that every private test can run without its fixtures.
+Use the [v1.1.1 release checksum](https://github.com/AithaEzio/PoseSnap/releases/tag/v1.1.1) and the manifest inside the Windows ZIP for the exact uploaded package. The public source tree excludes private evaluation data and is not a promise that every private test can run without its fixtures.
 </details>
 
 ## Credits
 
-**Built with Meta Llama 3.** Thank you to NVIDIA Kimodo, Meta SAM 3D Body/DINOv3/MHR/SAM 2, Microsoft MoGe, Google MediaPipe and the other model/framework contributors. Their licences remain separate from PoseSnap's licence. [Complete component notices](THIRD_PARTY_NOTICES.md) · [Component licence bundle](https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-Component-Licences-20261026.zip).
+**Built with Meta Llama 3.** Thank you to NVIDIA Kimodo, Meta SAM 3D Body/DINOv3/MHR/SAM 2, Microsoft MoGe, Google MediaPipe and the other model/framework contributors. Their licences remain separate from PoseSnap's licence. [Complete component notices](THIRD_PARTY_NOTICES.md) Â· [Component licence bundle](https://github.com/AithaEzio/PoseSnap/releases/download/engines-20261026-v1/PoseSnap-Component-Licences-20261026.zip).
 
-[Face Sculpting 108th (female)](https://sketchfab.com/3d-models/face-sculpting-108th-female-b6638e38d0b24ec7be39b578df25727b) by [ComputerCat](https://sketchfab.com/ComputerCats) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[Face Sculpting 108th (female)](https://sketchfab.com/3d-models/face-sculpting-108th-female-b6638e38d0b24ec7be39b578df25727b) by [ComputerCat](https://sketchfab.com/ComputerCats) Â· [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-[Rigged Character by BLENDERJO](https://sketchfab.com/3d-models/rigged-character-6ead91e980434073bfb15799d3e674bb) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[Rigged Character by BLENDERJO](https://sketchfab.com/3d-models/rigged-character-6ead91e980434073bfb15799d3e674bb) Â· [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-Adapted and rigged for PoseSnap’s preview. Genesis shapes may differ.
+Adapted and rigged for PoseSnapâ€™s preview. Genesis shapes may differ.
 
 Photography, music and clip attribution are recorded in [media credits](docs/MEDIA-CREDITS.md). The people and artists shown do not endorse PoseSnap. DAZ Studio and Genesis belong to their respective rights holders; PoseSnap is an independent project.
 
